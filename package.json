@@ -15,9 +15,9 @@
   },
   "scripts": {
     "lighthouse": "node ./jobs/lighthouse.js",
-    "dev": "next dev",
+    "start": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start:build": "next start"
   },
   "eslintConfig": {
     "extends": "react-app"
