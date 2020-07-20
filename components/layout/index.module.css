@@ -1,0 +1,18 @@
+
+.layout {
+    height:100vh;
+    padding:0;
+    margin:0;
+}
+.header {
+    height:6rem;
+    background-color: #000;
+}
+.body {
+    height:calc(100% - 12rem);
+    overflow-y:scroll;
+}
+.footer {
+    height:6rem;
+    background-color: #000;
+}
