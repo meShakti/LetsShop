@@ -18,6 +18,7 @@
     "lighthouse": "node ./jobs/lighthouse.js",
     "start": "next dev",
     "build": "next build",
+    "heroku-postbuild": "npm run build",
     "start:build": "next start"
   },
   "eslintConfig": {
