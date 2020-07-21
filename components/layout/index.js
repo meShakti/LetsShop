@@ -5,13 +5,13 @@ const Layout = ({children}) => {
         return(
             <div className={layout.layout}> 
             <div className={layout.header}>
-                Header
+                New Abhishek
             </div>
             <div className={layout.body}>
                 {children}
             </div>
             <div className={layout.footer}>
-                Footer
+            ©2020 by New Abhishek. Proudly Created by meShakti
             </div>
             </div>
         )

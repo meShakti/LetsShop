@@ -4,15 +4,16 @@
     padding:0;
     margin:0;
 }
-.header {
-    height:6rem;
-    background-color: #000;
-}
+
 .body {
     height:calc(100% - 12rem);
     overflow-y:scroll;
 }
-.footer {
+.footer, .header {
     height:6rem;
     background-color: #000;
+    color:white;
+    text-transform: uppercase;
+    text-align:center;
+    padding: 3rem;
 }
