@@ -18,8 +18,7 @@
     "lighthouse": "node ./jobs/lighthouse.js",
     "dev": "next dev",
     "build": "next build",
-    "heroku-postbuild": "npm run build",
-    "start": "next start"
+    "start": "next start -p $PORT"
   },
   "eslintConfig": {
     "extends": "react-app"
