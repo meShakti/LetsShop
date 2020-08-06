@@ -67,7 +67,7 @@
     "stylelint-processor-styled-components": "^1.10.0"
   },
   "lint-staged": {
-    "LetsShop/components/*/*.{js,jsx}": [
+    "*.{js,jsx}": [
       "npm run test:lint:fix"
      
     ],
