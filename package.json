@@ -69,17 +69,18 @@
   "lint-staged": {
     "/**/*.{js,jsx}": [
       "npm run test:lint:fix",
-      "git add"
+      "npm run test:lint:css"
+     
     ],
     "/**/*.css": [
       "stylelint --syntax css --fix",
-      "npm run test:lint:css",
-      "git add"
+      "npm run test:lint:css"
+      
     ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit":"lint-staged"
     }
   }
 }
