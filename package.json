@@ -67,11 +67,10 @@
     "stylelint-processor-styled-components": "^1.10.0"
   },
   "lint-staged": {
-    "**/*.js": [
-      "npm run test:lint:fix",
-      "git add"
-     
-    ],
+
+      "*.js": [
+        "eslint --fix"
+  ],
     "LetsShop/**/*.css": [
       "stylelint --syntax css --fix",
       "npm run test:lint:css"
