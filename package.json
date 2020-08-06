@@ -67,7 +67,7 @@
     "stylelint-processor-styled-components": "^1.10.0"
   },
   "lint-staged": {
-      "*.js":  "npm run lint"
+      "*":  "npm run lint"
   },
 
   "husky": {
