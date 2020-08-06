@@ -67,9 +67,9 @@
     "stylelint-processor-styled-components": "^1.10.0"
   },
   "lint-staged": {
-      "*.js":  "eslint --fix"
+      "*.js":  "npm run lint"
   },
-  
+
   "husky": {
     "hooks": {
       "pre-commit":"lint-staged"
