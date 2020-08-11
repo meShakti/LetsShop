@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ListItem = ({ image, name, description, cost, index, currency }) => {
-
+const ListItem = ({ image, name, description, cost }) => {
+	
 	return (
 		<div className="wrapper global-margin-auto global-margin-top-standard max-w-xs bg-gray-50 rounded-b-md shadow-lg overflow-hidden">
 			<div>
@@ -27,9 +27,7 @@ const ListItem = ({ image, name, description, cost, index, currency }) => {
 	);
 };
 
-const List = ({ products }) => {
-	 
-	 
+const List = ({ products }) => { 
 	return (
 		<div className="flex flex-wrap">
 			{products.map((product, index) => {
@@ -44,15 +42,18 @@ const List = ({ products }) => {
 };
 
 List.PropTypes={
-	products:PropTypes.object
+	products:PropTypes.any,
+	
 };
 
 ListItem.PropTypes={
-	image :PropTypes.object.isRequired,
-	name :PropTypes.string,
-	description :PropTypes.string,
-	cost :PropTypes.number,
-	index :PropTypes.number,
-	currency :PropTypes.number
+	image: PropTypes.Requireable.any,
+	name: PropTypes.string,
+	description: PropTypes.string,
+	cost: PropTypes.number,
+	index: PropTypes.number,
+	currency: PropTypes.number
+	
 };
+
 export default List;

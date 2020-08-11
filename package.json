@@ -22,8 +22,6 @@
     "build": "next build",
     "start": "next start -p $PORT",
     "lint": "npx eslint ./ ",
-    "test:lint:fix": "npx eslint ./ --fix",
-    "test:lint:css:fix": "stylelint  \"**/*.css\" --fix",
     "lint:css":"npx stylint ./ ",
     "lint:all": "npm run lint && npm run lint:css"
   },
