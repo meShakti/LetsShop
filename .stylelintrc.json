@@ -6,9 +6,11 @@
       "stylelint-config-prettier"
       
     ],
-    "ignoreFiles": [
-      "LetsShop/public/css/tailwind.min.css",
-      "LetsShop/*.json"
+    
+    "ignoreFiles": [  
+      "**/*.json",
+      "**/*.min.css"
+     
   ],
     "rules": {
       "block-no-empty": null,
@@ -19,8 +21,13 @@
         }
       ],
       "max-empty-lines": 2,
-      "unit-allowed-list": ["em", "rem", "%", "s","vh","vw"]
+      "unit-allowed-list": ["em", "rem", "%", "s","vh","vw"],
+      "at-rule-no-unknown": [ true, {
+       
+    }]
+
     },
+    
     "indentation": [
       2,
       {
@@ -30,4 +37,7 @@
       }
     ]
   
+
   }
+  
+    

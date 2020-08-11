@@ -21,10 +21,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p $PORT",
-    "lint": "npx eslint ./ --fix",
+    "lint": "npx eslint ./ ",
     "test:lint:fix": "npx eslint ./ --fix",
-    "test:lint:css": "stylelint  \"**/*.css\" --fix",
-    "test": "npm run test:lint:css && npm run test:lint:fix"
+    "test:lint:css:fix": "stylelint  \"**/*.css\" --fix",
+    "lint:css":"npx stylint ./ ",
+    "lint:all": "npm run lint && npm run lint:css"
   },
   "eslintConfig": {},
   "browserslist": {
@@ -72,11 +73,12 @@
     "stylelint-processor-styled-components": "^1.10.0"
   },
   "lint-staged": {
-    "*": "npm run lint"
+    "*": "npm run lint:all"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "echo $HUSKY_GIT_PARAMS"
     }
   }
 

@@ -1,19 +1,19 @@
 import React, { useState } from "react";
-import * as layout from "./index.module.css";
+import * as layout from "../layout/index.module.css";
 import PropTypes from "prop-types";
 
-import Header from "../Header/Header";
 
-const Layout = ({ children }) => {
+
+
+const Header = ({ children }) => {
 	
 	const [isExpanded, toggleExpansion] = useState(false);
   
   
 	return (
 
-		<div className={layout.layout}>
-           <Header></Header>
-			{/* <nav className="flex items-center justify-between flex-wrap bg-black p-6">
+		
+			<nav className="flex items-center justify-between flex-wrap bg-black p-6">
 				<div className="flex items-center flex-shrink-0 text-white mr-6">
 					<div>
 						<a href="#" className="inline-block text-sm px-4 py-0 leading-none mt-2 lg:mt-0">
@@ -41,23 +41,16 @@ const Layout = ({ children }) => {
 
 
 				</div>
-			</nav> */}
+			</nav>
 
-			{/* <div className={layout.header}>New Abhishek
-			</div> */}
-
-			<div className={layout.body}>{children}</div>
-			<div className={layout.footer}>
-        ©2020 by New Abhishek. Proudly Created by meShakti
-			</div>
-		</div>
+			
 
 
 
 	);
 };
 
-Layout.propTypes = {
+Header.propTypes = {
 	children: PropTypes.node
 };
-export default Layout;
+export default Header;
