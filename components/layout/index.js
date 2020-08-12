@@ -2,7 +2,7 @@ import React from "react";
 import * as layout from "./index.module.css";
 import PropTypes from "prop-types";
 
-import Header from "../Header/Header";
+import Header from "./header";
 
 const Layout = ({ children }) => {
 
@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
 			<Header/>
 			<div className={layout.body}>{children}</div>
 			<div className={layout.footer}>
-        		©2020 by New Abhishek. Proudly Created by meShakti
+        		©2020 by New Abhishek. Proudly Created by meShakti, meMeenakshi and meSaikat
 			</div>
 		</div>
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import * as header from "./Header.module.css";
 import PropTypes from "prop-types";
+
+import * as header from "./index.module.css";
 
 
 
