@@ -42,12 +42,12 @@ const List = ({ products }) => {
 };
 
 List.PropTypes={
-	products:PropTypes.any,
+	products:PropTypes.string,
 	
 };
 
 ListItem.PropTypes={
-	image: PropTypes.Requireable.any,
+	image: PropTypes.string,
 	name: PropTypes.string,
 	description: PropTypes.string,
 	cost: PropTypes.number,
