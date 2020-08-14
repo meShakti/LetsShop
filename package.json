@@ -78,7 +78,8 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "prepare-commit-msg": "jira-prepare-commit-msg"
+      "prepare-commit-msg": "jira-prepare-commit-msg",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "commitlint": {
