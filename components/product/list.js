@@ -32,8 +32,8 @@ const List = ({ products }) => {
 		<div className="flex flex-wrap">
 			{products.map((product, index) => {
 				return (
-					<div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4" key="">
-						<ListItem {...product} index={index}  key="" />
+					<div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4" key={product.id}>
+						<ListItem {...product} index={index}  key={product.id} />
 					</div>
 				);
 			})}
