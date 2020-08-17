@@ -21,7 +21,7 @@
     "lighthouse": "node ./jobs/lighthouse.js",
     "dev": "npm run prepare:build && next dev",
     "build": "npm run prepare:build && next build",
-    "start": "npm run prepare:build && next start -p $PORT",
+    "start": "next start -p $PORT",
     "prepare:build": "npm run build:tailwind",
     "build:tailwind": "tailwind build ./public/css/tailwind.css -o ./public/css/tailwind.output.css",
     "lint": "npx eslint ./ ",
