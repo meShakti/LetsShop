@@ -1,5 +1,5 @@
 import "normalize.css";
-import "../public/css/tailwind.min.css";
+import "../public/css/tailwind.output.css";
 import "../public/css/global.css";
 import React from "react";
 import PropTypes from "prop-types";
