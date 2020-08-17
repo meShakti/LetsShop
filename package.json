@@ -44,6 +44,8 @@
     "jobs/*.js"
   ],
   "devDependencies": {
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.6.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -75,7 +77,22 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "commit-msg": "echo $HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "rules": {
+      "references-empty": [
+        2,
+        "never"
+      ]
+    },
+    "parserPreset": {
+      "parserOpts": {
+        "issuePrefixes": [
+          "PROJ-"
+        ]
+      }
     }
   }
 }
