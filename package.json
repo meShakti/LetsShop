@@ -22,8 +22,8 @@
     "dev": "npm run prepare:build && next dev",
     "build": "npm run prepare:build && next build",
     "start": "npm run prepare:build && next start -p $PORT",
-    "prepare:build":"npm run build:tailwind",
-    "build:tailwind":"tailwind build ./public/css/tailwind.css -o ./public/css/tailwind.output.css",
+    "prepare:build": "npm run build:tailwind",
+    "build:tailwind": "tailwind build ./public/css/tailwind.css -o ./public/css/tailwind.output.css",
     "lint": "npx eslint ./ ",
     "lint:css": "npx stylint ./ ",
     "lint:all": "npm run lint && npm run lint:css"
