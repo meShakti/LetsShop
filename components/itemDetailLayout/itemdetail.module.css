@@ -1,0 +1,22 @@
+.content{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+   
+}
+
+.text{
+    margin :80px auto;
+   
+}
+
+@media screen and (max-width: 600px) {
+    .content{
+        display: block;
+    }
+    .text{
+        margin :40px auto;
+        padding :20px;
+    }
+
+  }
