@@ -1,12 +1,14 @@
 import React from "react";
 import productList from "../../data/data";
 import * as detail from "./itemdetail.module.css";
+import Carousel from "../productImage/productImage";
 
 const productLayout = ()=> {
 	return (
 		<div className={detail.content}>
 			<div >
-				<img src={productList[0].image} alt={productList[0].name}  />
+				<Carousel/>
+				{/* <img src={productList[0].image} alt={productList[0].name}  /> */}
 			</div>
 
 			<div className={detail.text}>
