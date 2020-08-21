@@ -15,7 +15,7 @@ const Header = () => {
 		<nav className="flex items-center justify-between flex-wrap bg-black p-6">
 			<div className="flex items-center flex-shrink-0 text-white mr-6">
 				<div>
-					<a href="#" className="inline-block text-sm px-4 py-0 leading-none mt-2 lg:mt-0">
+					<a href="/shoppingcart" className="inline-block text-sm px-4 py-0 leading-none mt-2 lg:mt-0">
 						<svg width="20" height="20" className={header.cart_item_bubbles}>
 							<circle cx="10" cy="10" r="10" fill="red" />
 							<text x="50%" y="50%" textAnchor="middle" fill="white" fontSize="10px" fontFamily="Arial" dy=".3em">1</text>

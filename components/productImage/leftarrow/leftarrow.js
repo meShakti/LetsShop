@@ -6,7 +6,8 @@ class LeftArrow extends Component {
 	render() {
 		return(
 			<div  className={newstyle.item} onClick={this.props.goToPrevSlide}>
-				 <span className={newstyle.dot}></span>
+				 {/* <span className={newstyle.dot}></span> */}
+				 <span className={newstyle.dot} >&#8594;</span>
 			</div>
 		);
 	}

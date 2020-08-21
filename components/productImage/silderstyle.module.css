@@ -13,6 +13,7 @@
   }
   
   .slider {
+    border : 10px solid black;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -43,15 +44,29 @@
     margin-left: 20px;
     /* border: 1px solid black; */
   }
-  
-  
+  .image{
+    width :90%;
+    height :90%;
+    margin: 0 auto;
+    animation: imageslider 3s 1;
+
+  }
+  @keyframes imageslider{
+    0%{
+      opacity: 0;
+    }
+     100%{
+     opacity: 1;
+     }
+  }
   .dot {
-    margin: 10px;
+    /* margin: 10px;
     height: 25px;
     width: 25px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
+    /* background-color: #bbb; */
+    /* border-radius: 50%;
+    display: inline-block; */ 
+  
   }
 
   

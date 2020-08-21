@@ -5,7 +5,8 @@ class RightArrow extends Component {
 	render() {
 		return(
 			<div className={newstyle.item} onClick={this.props.goToNextSlide}>
-		        <span className={newstyle.dot}></span>
+		        {/* <span className={newstyle.dot}></span> */}
+		        <span  className={newstyle.dot}>	&#8592;</span>
 			</div>
 		);
 	}

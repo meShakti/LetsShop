@@ -15,8 +15,7 @@ class Slide extends Component {
 						<div className={
 							index === this.props.activeIndex ? mystyle.active :  mystyle.slide }
 						key={index}>
-               
-							<p>	<img src={s.image} alt={s.name}  /> </p>
+							<p>	<img src={s.image} alt={s.name} className={mystyle.image} /> </p>
 						</div>
 					) }
 			</section>
