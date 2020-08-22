@@ -4,7 +4,7 @@
   
   .slide {
     display: none;
-    max-width: 900px;
+    max-width: 56.25rem;
     text-align: center;
   }
   
@@ -13,14 +13,14 @@
   }
   
   .slider {
-    border : 10px solid black;
+    border : 0.625rem solid black;
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
     text-align: center;
     width: 100%;
-    padding: 100px 0px 0px 0px;
+    padding: 6.25rem 0 0 0;
   }
   
   .slider-items {
@@ -32,17 +32,16 @@
   
   
   .slider-text {
-    width: 800px;
+    width: 50rem;
   }
   .buttons{
     display:  flex;
     flex-direction: row;
-    margin : 0 190px;
+    margin : 0 11.875rem;
   }
 
   .item{
-    margin-left: 20px;
-    /* border: 1px solid black; */
+    margin-left: 1.25rem;
   }
   .image{
     width :90%;
@@ -60,13 +59,7 @@
      }
   }
   .dot {
-    /* margin: 10px;
-    height: 25px;
-    width: 25px;
-    /* background-color: #bbb; */
-    /* border-radius: 50%;
-    display: inline-block; */ 
-  
+   
   }
 
   

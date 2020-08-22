@@ -29,11 +29,10 @@ export default function Cart(){
 						</div>
                     
 						<div>
-							<p>{data[0].name} </p> 
-							<p>{data[0].description}</p> 
+							<p>Maya Calendar Pillow </p> 
+							<p>Bedding Pillow</p> 
 							<p>Size: 3</p> 
-							<p>$ {data[0].cost} </p>
-							<p> </p>
+							<p> ₹ 100 </p>
 							<div>
 								<button className ="mr-4  mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-orange-500 rounded w-auto">Remove</button>
 								<button className ="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-orange-500 rounded w-auto">Save For Later</button>
@@ -56,11 +55,10 @@ export default function Cart(){
 						</div>
                     
 						<div>
-							<p>{data[1].name} </p> 
-							<p>{data[1].description}</p> 
+							<p>Maya Calendar Pillow </p> 
+							<p>Bedding Pillow</p> 
 							<p>Size: 3</p> 
-							<p>$ {data[1].cost} </p>
-							<p> </p>
+							<p> ₹ 100 </p>
 							<div>
 								<button className ="mr-4  mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-orange-500 rounded w-auto">Remove</button>
 								<button className ="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-orange-500 rounded w-auto">Save For Later</button>
@@ -88,13 +86,13 @@ export default function Cart(){
 					</div>
 					<div className={Layout.pricedetails}>
 						<span> Price</span>
-						<span>$100</span>
+						<span>₹ 100</span>
 						<span> Delivery Fee</span>
-						<span>$40</span>
+						<span>₹ 40</span>
 					</div>
 					<div className={Layout.total}>
 						<span > Total</span>
-						<span>$140</span> 
+						<span>₹ 140</span> 
 					</div>
 
 				</div>
@@ -117,11 +115,10 @@ export default function Cart(){
 						</div>
                     
 						<div>
-							<p>{data[0].name} </p> 
-							<p>{data[0].description}</p> 
+							<p>Maya Calendar Pillow </p> 
+							<p>Bedding Pillow</p> 
 							<p>Size: 3</p> 
-							<p>$ {data[0].cost} </p>
-							<p> </p>
+							<p> ₹ 100 </p>
 							<div>
 								<button className ="mr-4  mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-orange-500 rounded w-auto">Remove</button>
 								<button className ="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-orange-500 rounded w-auto">Add to Cart</button>

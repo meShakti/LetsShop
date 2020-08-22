@@ -3,7 +3,7 @@ import Slide from "./slider";
 import LeftArrow from "./leftarrow/leftarrow";
 import RightArrow from "./rightarrow";
 import data from "../../data/data";
-import  * as newstyle from "./silderstyle.module.css";
+import  * as newstyle from "./silder.module.css";
 
 
 class Slider extends Component {

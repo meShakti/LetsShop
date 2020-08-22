@@ -1,7 +1,7 @@
 import  { Component } from "react";
 import React from "react";
 import PropTypes from "prop-types";
-import  * as newstyle from ".././silderstyle.module.css";
+import  * as newstyle from ".././silder.module.css";
 class LeftArrow extends Component {
 	render() {
 		return(

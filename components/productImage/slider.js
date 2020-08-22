@@ -1,5 +1,5 @@
 import React , {Component} from "react";
-import  * as mystyle from "./silderstyle.module.css";
+import  * as mystyle from "./silder.module.css";
 import data from "../../data/data";
 import PropTypes from "prop-types";
 class Slide extends Component {

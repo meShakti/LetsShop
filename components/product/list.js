@@ -13,7 +13,7 @@ const ListItem = ({ image, name, description, cost }) => {
 				</div>
 				<div className="p-8 space-y-2">
 					<h3 className="text-gray-700 text-center font-semibold text-md">
-						<a href="/itemdetail">{name}</a>
+						<a href="/ProductDetail">{name}</a>
 					</h3>
 					<p className="text-sm text-gray-900 text-center leading-sm">
 						{description}

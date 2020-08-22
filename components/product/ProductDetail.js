@@ -1,21 +1,20 @@
 import React from "react";
 import productList from "../../data/data";
-import * as detail from "./itemdetail.module.css";
-import Carousel from "../productImage/productImage";
+import * as detail from "./productdetail.module.css";
+import ProductImage from "../productImage/productImage";
 
-const productLayout = ()=> {
+const ProductInformation = ()=> {
 	return (
 		<div className={detail.content}>
 			<div >
-				<Carousel/>
+				<ProductImage/>
 				{/* <img src={productList[0].image} alt={productList[0].name}  /> */}
 			</div>
 
 			<div className={detail.text}>
 				<div className="p-1 space-y-5">
-					<h1 className="text-gray-700 text-center text-3xl font-bold text-md">
+					<h1 className="text-gray-700 text-center border-b-2 text-3xl font-bold text-md">
 						{productList[0].name}
-						<hr></hr>
 					</h1>
 					<p className="text-sm text-gray-900 text-left leading-sm">
 						Rate : 4
@@ -58,4 +57,4 @@ const productLayout = ()=> {
 	
 	);
 };
-export default productLayout;
+export default  ProductInformation;
