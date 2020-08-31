@@ -1,25 +1,23 @@
 import React from "react";
-import productList from "../../data/data";
-import * as detail from "./productdetail.module.css";
-import ProductSilder from "../productsilder/ProductSilder";
+import * as detail from "./detail.module.css";
+import ProductSilder from "./slider/index";
 
-const ProductDisplayer= ()=> {
+const Detail= ()=> {
 	return (
 		<div className={detail.content}>
 			<div >
 				<ProductSilder/>
 			</div>
-
 			<div className={detail.text}>
 				<div className="p-1 space-y-5">
 					<h1 className="text-gray-700 text-center border-b-2 text-3xl font-bold text-md">
-						{productList[0].name}
+					Maya Calendar Pillow
 					</h1>
 					<p className="text-sm text-gray-900 text-left leading-sm">
 						Rate : 4
 					</p>
 					<p className="text-lg text-gray-900 text-left leading-sm">
-						{productList[0].description}
+					Bedding Pillow
 					</p>
 
 					<p className="text-lg text-left text-gray-900 leading-lg">
@@ -39,8 +37,7 @@ const ProductDisplayer= ()=> {
 						</select>
 					</p>
 					<p className="text-lg text-left text-gray-900  leading-lg">
-                     Price :  ₹
-						{productList[0].cost}
+                     Price :  ₹ 100
 					</p>
 					
 				</div>
@@ -56,4 +53,4 @@ const ProductDisplayer= ()=> {
 	
 	);
 };
-export default  ProductDisplayer;
+export default  Detail;

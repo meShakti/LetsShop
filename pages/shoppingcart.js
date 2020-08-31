@@ -3,11 +3,12 @@ import Layout from "../components/layout";
 
 import Cart from "../components/cart/Cart";
 
-
-export default function ShoppingCart() {
+const ShoppingCart = ()=> {
 	return (
 		<Layout>	
 			<Cart/>
 		</Layout>
 	);
-}
+};
+
+export default ShoppingCart;
