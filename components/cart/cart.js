@@ -34,8 +34,8 @@ export default function Cart(){
 							<p>Size: 3</p> 
 							<p> ₹ 100 </p>
 							<div>
-								<button className ="mr-4  mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-orange-500 rounded w-auto">Remove</button>
-								<button className ="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-orange-500 rounded w-auto">Save For Later</button>
+								<button className ="mr-4  mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-auto">Remove</button>
+								<button className ="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-auto">Save For Later</button>
                     
 							</div>
 						</div>
@@ -60,8 +60,8 @@ export default function Cart(){
 							<p>Size: 3</p> 
 							<p> ₹ 100 </p>
 							<div>
-								<button className ="mr-4  mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-orange-500 rounded w-auto">Remove</button>
-								<button className ="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-orange-500 rounded w-auto">Save For Later</button>
+								<button className ="mr-4  mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-auto">Remove</button>
+								<button className ="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-auto">Save For Later</button>
                     
 							</div>
 
@@ -120,8 +120,8 @@ export default function Cart(){
 							<p>Size: 3</p> 
 							<p> ₹ 100 </p>
 							<div>
-								<button className ="mr-4  mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-orange-500 rounded w-auto">Remove</button>
-								<button className ="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-orange-500 rounded w-auto">Add to Cart</button>
+								<button className ="mr-4  mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-auto">Remove</button>
+								<button className ="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-auto">Add to Cart</button>
                     
 							</div>
 						</div>

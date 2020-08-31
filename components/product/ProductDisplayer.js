@@ -1,13 +1,13 @@
 import React from "react";
 import productList from "../../data/data";
 import * as detail from "./productdetail.module.css";
-import ProductImage from "../productImage/productImage";
+import ProductSilder from "../productsilder/ProductSilder";
 
 const ProductDisplayer= ()=> {
 	return (
 		<div className={detail.content}>
 			<div >
-				<ProductImage/>
+				<ProductSilder/>
 			</div>
 
 			<div className={detail.text}>

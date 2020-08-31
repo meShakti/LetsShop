@@ -37,11 +37,12 @@
   .buttons{
     display:  flex;
     flex-direction: row;
-    margin : 0 11.875rem;
+     margin : 0 13.5rem;
+   
   }
 
   .item{
-    margin-left: 1.25rem;
+    margin-left: 2rem;
   }
   .image{
     width :90%;
@@ -58,6 +59,11 @@
      opacity: 1;
      }
   }
+/* Mobile large screens  for example (Moto G4 and Pixel 2XL) */
+/* centers the left and right margin arrows for silder */
+  @media screen and (max-width: 600px) {
+    .buttons{
+       margin : 0 8rem;
+    }
 
-
-  
+  }

@@ -1,3 +1,4 @@
+
 .container{
     display: flex;
     flex-direction: row;
@@ -131,8 +132,6 @@
           border : none;
          
       }
-      
-
     .footer{
         float: none;
     }

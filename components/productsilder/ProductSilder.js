@@ -1,5 +1,5 @@
 import  React ,{ Component } from "react";
-import Slide from "./slider";
+import Slide from "./Slider";
 import data from "../../data/data";
 import  * as newstyle from "./silder.module.css";
 

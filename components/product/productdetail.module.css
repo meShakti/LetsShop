@@ -8,7 +8,9 @@
     margin :5rem auto;
    
 }
-/* Mobile screen */
+/* Mobile large screens  for example (Moto G4 and Pixel 2XL) */
+/* display  for the contents are changed to block to fit the screen size */
+/* text margins are adjusted */
 @media screen and (max-width: 600px) {
     .content{
         display: block;
