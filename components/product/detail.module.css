@@ -1,0 +1,23 @@
+.content{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;  
+}
+
+.text{
+    margin :5rem auto;
+   
+}
+/* Mobile large screens  for example (Moto G4 and Pixel 2XL) */
+/* display  for the contents are changed to block to fit the screen size */
+/* text margins are adjusted */
+@media screen and (max-width: 600px) {
+    .content{
+        display: block;
+    }
+    .text{
+        margin :2.5rem auto;
+        padding :1.25rem;
+    }
+
+  }

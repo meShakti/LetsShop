@@ -1,28 +1,32 @@
 import React from "react";
 import PropTypes from "prop-types";
+import  * as list from  "./list.module.css";
 
 const ListItem = ({ image, name, description, cost }) => {
 	
 	return (
-		<div className="wrapper global-margin-auto global-margin-top-standard max-w-xs bg-gray-50 rounded-b-md shadow-lg overflow-hidden">
-			<div>
-				<img src={image} alt={name} />
-			</div>
-			<div className="p-3 space-y-3">
-				<h3 className="text-gray-700 text-center font-semibold text-md">
-					{name}
-				</h3>
-				<p className="text-sm text-gray-900 text-center leading-sm">
-					{description}
-				</p>
-				<p className="text-sm text-center text-gray-900 leading-sm">
+		
+		<div className ={list.itemcard}>
+			<div  className="wrapper global-margin-auto  global-margin-top-standard max-w-xs bg-gray-50 rounded-b-md shadow-lg overflow-hidden">
+				<div className={list.itemimage} >
+					<img src={image} alt={name}  />
+				</div>
+				<div className="p-8 space-y-2">
+					<h3 className="text-gray-700 text-center font-semibold text-md">
+						<a href="/ProductDetail">{name}</a>
+					</h3>
+					<p className="text-sm text-gray-900 text-center leading-sm">
+						{description}
+					</p>
+					<p className="text-sm text-center text-gray-900 leading-sm">
   ₹
-					{cost}
-				</p>
+						{cost}
+					</p>
+				</div>
+				<button className="bg-teal-600 w-full flex justify-center py-2 text-white font-semibold transition duration-300 hover:bg-teal-500">
+   					Add To Cart
+				</button>
 			</div>
-			<button className="bg-teal-600 w-full flex justify-center py-2 text-white font-semibold transition duration-300 hover:bg-teal-500">
-    Add To Cart
-			</button>
 		</div>
 	);
 };

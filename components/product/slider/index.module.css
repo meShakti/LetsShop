@@ -1,0 +1,69 @@
+.inactive {
+    display: none;
+  }
+  
+  .slide {
+    display: none;
+    max-width: 56.25rem;
+    text-align: center;
+  }
+  
+  .active {
+    display: block;
+  }
+  
+  .slider {
+    border : 0.625rem solid black;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 6.25rem 0 0 0;
+  }
+  
+  .slideritems {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+  }
+  
+  
+  .slidertext {
+    width: 5rem;
+  }
+  .buttons{
+    display:  flex;
+    flex-direction: row;
+     margin : 0 13.5rem;
+   
+  }
+
+  .item{
+    margin-left: 2rem;
+  }
+  .image{
+    width :90%;
+    height :90%;
+    margin: 0 auto;
+    animation: imageslider 1s 1;
+
+  }
+  @keyframes imageslider{
+    0%{
+      opacity: 0.2;
+    }
+     100%{
+     opacity: 1;
+     }
+  }
+/* Mobile large screens  for example (Moto G4 and Pixel 2XL) */
+/* centers the left and right margin arrows for silder */
+  @media screen and (max-width: 600px) {
+    .buttons{
+       margin : 0 8rem;
+    }
+
+  }
