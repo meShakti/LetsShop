@@ -97,13 +97,8 @@
 .footer{
     float: right;
 }
-
-
 .saveforlater{
-    
-     margin:2rem 10rem;
-   
-
+    margin:2rem 10rem;
 }
 /* Mobile Screens */
 @media screen and (max-width: 600px) {

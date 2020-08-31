@@ -3,12 +3,11 @@ import productList from "../../data/data";
 import * as detail from "./productdetail.module.css";
 import ProductImage from "../productImage/productImage";
 
-const ProductInformation = ()=> {
+const ProductDisplayer= ()=> {
 	return (
 		<div className={detail.content}>
 			<div >
 				<ProductImage/>
-				{/* <img src={productList[0].image} alt={productList[0].name}  /> */}
 			</div>
 
 			<div className={detail.text}>
@@ -57,4 +56,4 @@ const ProductInformation = ()=> {
 	
 	);
 };
-export default  ProductInformation;
+export default  ProductDisplayer;

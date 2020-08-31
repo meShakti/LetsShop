@@ -23,7 +23,7 @@
     padding: 6.25rem 0 0 0;
   }
   
-  .slider-items {
+  .slideritems {
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -31,8 +31,8 @@
   }
   
   
-  .slider-text {
-    width: 50rem;
+  .slidertext {
+    width: 5rem;
   }
   .buttons{
     display:  flex;
@@ -47,19 +47,17 @@
     width :90%;
     height :90%;
     margin: 0 auto;
-    animation: imageslider 3s 1;
+    animation: imageslider 1s 1;
 
   }
   @keyframes imageslider{
     0%{
-      opacity: 0;
+      opacity: 0.2;
     }
      100%{
      opacity: 1;
      }
   }
-  .dot {
-   
-  }
+
 
   

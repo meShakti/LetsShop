@@ -1,7 +1,5 @@
 import  React ,{ Component } from "react";
 import Slide from "./slider";
-import LeftArrow from "./leftarrow/leftarrow";
-import RightArrow from "./rightarrow";
 import data from "../../data/data";
 import  * as newstyle from "./silder.module.css";
 
@@ -14,7 +12,7 @@ class Slider extends Component {
 			length: data.length
 	  };
 	}
-	goToPrevSlide() {
+	goToPrevSlide=()=> {
 		let index = this.state.activeIndex;
 		let length = this.state.length;
 		if(index < 1) {
@@ -27,7 +25,7 @@ class Slider extends Component {
 		  activeIndex: index
 		});
 	  }
-	goToNextSlide() {
+	goToNextSlide = ()=> {
 		  let index = this.state.activeIndex;
 		  let length = this.state.length;
 		if(index === length - 1) {
@@ -42,15 +40,19 @@ class Slider extends Component {
 	  }
 	  render() {
 		return (
-		  <div className='slider'>
-				<div className='slider-items'>
+		  <div >
+				<div >
 			  
-					<div className='slider-text'>
+					<div >
 			  			<Slide activeIndex={this.state.activeIndex}/>
 					</div>
 					<div className={newstyle.buttons}>
-						<RightArrow  className={newstyle.item} goToNextSlide={() => this.goToNextSlide()}/>
-			  			<LeftArrow  className={newstyle.item} goToPrevSlide={() => this.goToPrevSlide()}/>
+					    <div className={newstyle.item} onClick={this.goToNextSlide}>
+			              <span >	&#8592;</span>
+		                 </div>
+						 <div   className={newstyle.item}  onClick={this.goToPrevSlide}>
+				         <span  >&#8594;</span>
+		               	</div>
 					</div>
 			  
 				</div>
