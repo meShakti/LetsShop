@@ -1,5 +1,5 @@
 import React from "react";
-import Product from "../components/product/Detail";
+import Product from "../src/components/product/Detail";
 
 
 

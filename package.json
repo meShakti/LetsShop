@@ -16,12 +16,14 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-redux": "^7.2.1",
+    "react-scripts": "3.4.1",
+    "redux": "^4.0.5"
   },
   "scripts": {
     "lighthouse": "node ./jobs/lighthouse.js",
     "analyze": "npm run build && source-map-explorer ./.next/**/*.js",
-    "dev": "npm run prepare:build && next dev",
+    "dev": "next dev",
     "build": "npm run prepare:build && next build",
     "start": "next start -p $PORT",
     "prepare:build": "npm run build:tailwind",

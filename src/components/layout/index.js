@@ -1,8 +1,8 @@
 import React from "react";
 import * as layout from "./index.module.css";
 import PropTypes from "prop-types";
-
 import Header from "./header";
+import { withRedux } from "../../state/withReduxStore";
 
 const Layout = ({ children }) => {
 
@@ -24,4 +24,4 @@ const Layout = ({ children }) => {
 Layout.propTypes = {
 	children: PropTypes.node
 };
-export default Layout;
+export default withRedux(Layout);
