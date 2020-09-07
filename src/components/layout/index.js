@@ -2,19 +2,25 @@ import React from "react";
 import * as layout from "./index.module.css";
 import PropTypes from "prop-types";
 import Header from "./header";
-import { withRedux } from "../../state/withReduxStore";
+import { Provider } from "react-redux";
+import initializeStore from "../../state/store";
+import { PersistGate } from "redux-persist/integration/react";
 
+const { store, persistor } = initializeStore();
 const Layout = ({ children }) => {
 
 	return (
-
-		<div className={layout.layout}>
-			<Header/>
-			<div className={layout.body}>{children}</div>
-			<div className={layout.footer}>
-        		©2020 by New Abhishek. Proudly Created by meShakti, meMeenakshi and meSaikat
-			</div>
-		</div>
+		<Provider store={store}> {/* Adds provider and persistor support */}
+			<PersistGate loading={null} persistor={persistor}>
+				<div className={layout.layout}>
+					<Header />
+					<div className={layout.body}>{children}</div>
+					<div className={layout.footer}>
+						©2020 by New Abhishek. Proudly Created by meShakti, meMeenakshi and meSaikat
+					</div>
+				</div>
+			</PersistGate>
+		</Provider>
 
 
 
@@ -24,4 +30,4 @@ const Layout = ({ children }) => {
 Layout.propTypes = {
 	children: PropTypes.node
 };
-export default withRedux(Layout);
+export default Layout;
