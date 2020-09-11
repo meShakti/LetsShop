@@ -5,6 +5,32 @@ export default function Cart(){
 	return (
 		<div>
 			<div className={Layout.container}>
+
+				   {/* Price  topCard  */}
+				   <div className={Layout.priceCardTop}>
+					<div className={Layout.heading}>
+                    Price Details
+					</div>
+					<div className={Layout.pricedetails}>
+						<span> Price</span>
+						<span>₹ 100</span>
+						<span> Delivery Fee</span>
+						<span>₹ 40</span>
+					</div>
+					<div className={Layout.total}>
+						<span > Total</span>
+						<span>₹ 140</span> 
+					</div>
+					<div >
+						<button className="mt-4 bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded w-56">Place order</button>
+					</div>
+				</div>
+		
+				   
+
+
+
+				{/* item 1 */}
 				<div className={Layout.itemcard}>
 					<div className={Layout.itemhead}>
                     My Cart
@@ -20,9 +46,9 @@ export default function Cart(){
 					<div className={Layout.item}>
 						<div className={Layout.image}>
 							<img src={data[0].image}></img>
-							<div className="input-group">
+							<div className= {Layout.inputgroup}>
 								<input type="button" value="-" className={Layout.button} data-field="quantity"/>
-								<input type="number" step="1" max="" value="1"  className={Layout.quantity}/>
+								<div className={Layout.quantity}>1</div>
 								<input type="button" value="+" className={Layout.button} data-field="quantity"/>
 							</div>
                         
@@ -34,8 +60,8 @@ export default function Cart(){
 							<p>Size: 3</p> 
 							<p> ₹ 100 </p>
 							<div>
-								<button className ="mr-4  mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-auto">Remove</button>
-								<button className ="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-auto">Save For Later</button>
+								<button className ="mr-1  mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-32">Remove</button>
+								<button className ="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-32">Save For Later</button>
                     
 							</div>
 						</div>
@@ -46,9 +72,9 @@ export default function Cart(){
 					<div className={Layout.item}>
 						<div className={Layout.image}>
 							<img src={data[1].image}></img>
-							<div className="input-group">
+							<div className={Layout.inputgroup}>
 								<input type="button" value="-" className={Layout.button} data-field="quantity"/>
-								<input type="number" step="1" max="" value="1"  className={Layout.quantity}/>
+								<div className={Layout.quantity}>1</div>
 								<input type="button" value="+" className={Layout.button} data-field="quantity"/>
 							</div>
                         
@@ -60,8 +86,8 @@ export default function Cart(){
 							<p>Size: 3</p> 
 							<p> ₹ 100 </p>
 							<div>
-								<button className ="mr-4  mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-auto">Remove</button>
-								<button className ="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-auto">Save For Later</button>
+								<button className ="mr-1  mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-32">Remove</button>
+								<button className ="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-32">Save For Later</button>
                     
 							</div>
 
@@ -74,12 +100,7 @@ export default function Cart(){
 					</div>
 				</div>
            
-
-
-
-
-
-            
+				{/* Price Card  */}
 				<div className={Layout.price}>
 					<div className={Layout.heading}>
                     Price Details
@@ -94,11 +115,14 @@ export default function Cart(){
 						<span > Total</span>
 						<span>₹ 140</span> 
 					</div>
-
+					<div >
+						<button className="mt-4 bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded w-56">Place order</button>
+					</div>
 				</div>
-       
-			</div>
-			<div className={Layout.saveforlater}>
+
+
+				{/* Save for Later Card */}
+				
 				<div className={Layout.itemcard}>
 					<div className={Layout.itemhead}>
                     Save For Later
@@ -106,34 +130,33 @@ export default function Cart(){
 					<div className={Layout.item}>
 						<div className={Layout.image}>
 							<img src={data[0].image}></img>
-							<div className="input-group">
+							<div className={Layout.inputgroup}>
 								<input type="button" value="-" className={Layout.button} data-field="quantity"/>
-								<input type="number" step="1" max="" value="1"  className={Layout.quantity}/>
+								<div className={Layout.quantity}>1</div>
 								<input type="button" value="+" className={Layout.button} data-field="quantity"/>
-							</div>
-                        
+							</div>        
 						</div>
-                    
+
 						<div>
 							<p>Maya Calendar Pillow </p> 
 							<p>Bedding Pillow</p> 
 							<p>Size: 3</p> 
 							<p> ₹ 100 </p>
 							<div>
-								<button className ="mr-4  mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-auto">Remove</button>
-								<button className ="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-auto">Add to Cart</button>
-                    
+								<button className ="mr-1  mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-32">Remove</button>
+								<button className ="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-32">Add to Cart</button>                    
 							</div>
-						</div>
-                  
-               
-
+						</div>	
+						
 					</div>
-               
-            
 				</div>
-			</div>
+			</div>       
 		</div>
+			
+			
+				
+	
+	
      
 	);
 }
