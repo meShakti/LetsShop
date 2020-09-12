@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import * as header from "./index.module.css";
 import {IoIosCart} from "react-icons/io";
-import {IconContext} from "react-icons";
 
 
 const Header = ({counter}) => {
@@ -17,9 +16,7 @@ const Header = ({counter}) => {
 				<div>
 					<a href="/Cart" className="inline-block text-sm px-4 py-0 leading-none mt-2 lg:mt-0">
 						<div className={header.cart_item_bubbles}>{counter}</div>
-						<IconContext.Provider value={{ style: {fontSize: "40px"}}}>
-							<IoIosCart></IoIosCart>
-						</IconContext.Provider>
+						<IoIosCart size="2.5rem"></IoIosCart>
 					</a>
 				</div>
 				<a href="/"><span className="font-semibold text-xl tracking-tight">New Abhishek</span></a>

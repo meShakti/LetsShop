@@ -1,4 +1,3 @@
-
 .container{
     display: grid;
     grid-template-columns: auto auto ;
@@ -71,16 +70,15 @@
     font-size: 1rem;
     margin:0.3125rem 2.8rem;
   cursor: pointer;
-  }
-  .deliveraddress{
+}
+
+.deliveraddress{
       float:right;
       font-size:0.8rem;
       border : none;
       margin:0;
   }
-  
-
-.buttonion{
+.button{
     font-size: 2rem;
     padding:0.4rem;
     display: inline;
