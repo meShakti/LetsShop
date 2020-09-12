@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import * as header from "./index.module.css";
-
-
+import {IoIosCart} from "react-icons/io";
+import {IconContext} from "react-icons";
 
 
 const Header = ({counter}) => {
@@ -16,11 +16,10 @@ const Header = ({counter}) => {
 			<div className="flex items-center flex-shrink-0 text-white mr-6">
 				<div>
 					<a href="/Cart" className="inline-block text-sm px-4 py-0 leading-none mt-2 lg:mt-0">
-						<svg width="20" height="20" className={header.cart_item_bubbles}>
-							<circle cx="10" cy="10" r="10" fill="red" />
-							<text x="50%" y="50%" textAnchor="middle" fill="white" fontSize="10px" fontFamily="Arial" dy=".3em">{counter}</text>
-						</svg>
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="40px" height="40px"><path d="M0 0h24v24H0z" fill="none" /><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" /></svg>
+						<div className={header.cart_item_bubbles}>{counter}</div>
+						<IconContext.Provider value={{ style: {fontSize: "40px"}}}>
+							<IoIosCart></IoIosCart>
+						</IconContext.Provider>
 					</a>
 				</div>
 				<a href="/"><span className="font-semibold text-xl tracking-tight">New Abhishek</span></a>

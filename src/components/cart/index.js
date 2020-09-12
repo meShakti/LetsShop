@@ -1,6 +1,9 @@
 import React from "react";
 import * as Layout from "./cart.module.css";
 import data from "../../data/data";
+import {IoMdAddCircleOutline} from "react-icons/io";
+import {IoMdRemoveCircleOutline} from "react-icons/io";
+
 export default function Cart(){
 	return (
 		<div>
@@ -47,9 +50,9 @@ export default function Cart(){
 						<div className={Layout.image}>
 							<img src={data[0].image}></img>
 							<div className= {Layout.inputgroup}>
-								<input type="button" value="-" className={Layout.button} data-field="quantity"/>
+								<IoMdRemoveCircleOutline className={Layout.buttonion} ></IoMdRemoveCircleOutline>
 								<div className={Layout.quantity}>1</div>
-								<input type="button" value="+" className={Layout.button} data-field="quantity"/>
+								<IoMdAddCircleOutline className={Layout.buttonion} ></IoMdAddCircleOutline>
 							</div>
                         
 						</div>
@@ -73,9 +76,9 @@ export default function Cart(){
 						<div className={Layout.image}>
 							<img src={data[1].image}></img>
 							<div className={Layout.inputgroup}>
-								<input type="button" value="-" className={Layout.button} data-field="quantity"/>
+								<IoMdRemoveCircleOutline className={Layout.buttonion} ></IoMdRemoveCircleOutline>
 								<div className={Layout.quantity}>1</div>
-								<input type="button" value="+" className={Layout.button} data-field="quantity"/>
+								<IoMdAddCircleOutline className={Layout.buttonion} ></IoMdAddCircleOutline>
 							</div>
                         
 						</div>
@@ -131,9 +134,9 @@ export default function Cart(){
 						<div className={Layout.image}>
 							<img src={data[0].image}></img>
 							<div className={Layout.inputgroup}>
-								<input type="button" value="-" className={Layout.button} data-field="quantity"/>
+								<IoMdRemoveCircleOutline className={Layout.buttonion} ></IoMdRemoveCircleOutline>
 								<div className={Layout.quantity}>1</div>
-								<input type="button" value="+" className={Layout.button} data-field="quantity"/>
+								<IoMdAddCircleOutline className={Layout.buttonion} ></IoMdAddCircleOutline>
 							</div>        
 						</div>
 
