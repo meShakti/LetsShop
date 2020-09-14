@@ -1,6 +1,6 @@
 import React from "react";
 import * as Layout from "./cart.module.css";
-import data from "../../data/data";
+import data from "../../state/stocks/mock";
 import {IoMdAddCircleOutline} from "react-icons/io";
 import {IoMdRemoveCircleOutline} from "react-icons/io";
 

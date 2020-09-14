@@ -1,0 +1,6 @@
+.error-container{
+    min-height: 6.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

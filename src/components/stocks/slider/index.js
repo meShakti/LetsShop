@@ -1,6 +1,6 @@
 import  React ,{ Component } from "react";
 import Slide from "./Slider";
-import data from "../../../data/data";
+import data from "../../../state/stocks/mock";
 import  * as newstyle from "./index.module.css";
 
 

@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ProductList from "../src/components/stocks/list";
+import AsyncRenderer from "../src/components/common/AsyncRenderer";
+import { useStockList } from "../src/state/stocks/hooks";
+// Page which render stock list
 
-import ProductList from "../src/components/product/list";
-import productList from "../src/data/data";
+const Index=()=> {
+	
+	const [list,isLoading,getList] = useStockList();
+	
+	useEffect(()=>{
+		getList();
+	},[]);
 
-export default function Index() {
-	return (
-		<ProductList products={productList} />
+	return (<AsyncRenderer isLoading={isLoading}>
+		<ProductList products={list} />
+	</AsyncRenderer>
 	);
-}
+};
+export default Index;
