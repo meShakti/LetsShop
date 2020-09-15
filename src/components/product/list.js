@@ -9,7 +9,7 @@ const ListItem = ({ image, name, description, cost,increment }) => {
 	return (
 		
 		<div className ={list.itemcard}>
-			<div  className="wrapper global-margin-auto  global-margin-top-standard max-w-xs bg-gray-50 rounded-b-md shadow-lg overflow-hidden">
+			<div  className="wrapper global-margin-auto  global-margin-top-standard max-w-xs bg-gray-50 rounded-b-md  overflow-hidden">
 				<div className={list.itemimage} >
 					<img src={image} alt={name}  />
 				</div>
