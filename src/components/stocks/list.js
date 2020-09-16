@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import { increment } from "../../state/counter/actions";
 import  * as list from  "./list.module.css";
+// Renders stock lists
 
+// renders each list item
 const ListItem = ({ image, name, description, cost,increment }) => {
 	
 	return (
@@ -34,6 +36,7 @@ const ListItem = ({ image, name, description, cost,increment }) => {
 };
 
 const List = ({ products, increment }) => { 
+	
 	return (
 		<div className="flex flex-wrap">
 			{products.map((product, index) => {
@@ -65,6 +68,8 @@ ListItem.propTypes={
 	increment: PropTypes.func
 	
 };
+
+//Addition of redux elements
 const mapDispatchToProps = dispatch => {
 	return {
 		increment: () => dispatch(increment())

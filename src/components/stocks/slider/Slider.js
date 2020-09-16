@@ -1,6 +1,6 @@
 import React , {Component} from "react";
 import  * as mystyle from "./index.module.css";
-import data from "../../../data/data";
+import data from "../../../state/stocks/mock";
 import PropTypes from "prop-types";
 class Slide extends Component {
 	constructor(props) {
