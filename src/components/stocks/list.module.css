@@ -1,4 +1,11 @@
 .itemcard{
 margin:1.25rem;
-
+height: 29rem;
+    display: flex;
+    flex-direction: column;
+}
+.itemimage{
+    width:18.125rem;
+    height:15.625rem;
+    overflow: hidden;
 }
