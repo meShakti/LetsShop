@@ -9,6 +9,7 @@ const productList = [
 		cost: 1104,
 		mrp:1200,
 		currency: "₹",
+		category:"funiture",
 		availability:{
 			status:"available"
 		},
@@ -27,6 +28,7 @@ const productList = [
 		cost: 3695,
 		mrp:4990,
 		currency: "₹",
+		category:"funiture",
 		availability:{
 			status:"available"
 		},
@@ -43,6 +45,7 @@ const productList = [
 		rating:4.2,
 		totalRatings:1101,
 		cost: 1104,
+		category:"funiture",
 		mrp:1200,
 		availability:{
 			status:"available"
@@ -58,6 +61,7 @@ const productList = [
 		id: "12351",
 		name: "Sleepyhead Flip - Dual Sided 5 inch Single High Density (HD) Foam Mattress",
 		description:"Vacuum Packed",
+		category:"funiture",
 		rating:4.2,
 		totalRatings:5224,
 		cost: 5224,
@@ -78,6 +82,7 @@ const productList = [
 		description:"Finish Color - Brown",
 		rating:3.9,
 		totalRatings:6176,
+		category:"funiture",
 		cost: 15690,
 		mrp:31140,
 		currency: "₹",
@@ -98,6 +103,7 @@ const productList = [
 		totalRatings:1101,
 		cost: 3990,
 		mrp:5799,
+		category:"funiture",
 		availability:{
 			status:"available"
 		},
@@ -114,6 +120,7 @@ const productList = [
 		description:"Black",
 		rating:4.2,
 		totalRatings:1027,
+		category:"funiture",
 		cost: 9290,
 		mrp:13004,
 		availability:{
@@ -135,6 +142,7 @@ const productList = [
 		cost: 899,
 		mrp:1499,
 		currency: "₹",
+		category:"funiture",
 		availability:{
 			status:"scarce",
 			stockLeft:10
@@ -154,6 +162,7 @@ const productList = [
 		cost: 1520,
 		mrp:3800,
 		currency: "₹",
+		category:"funiture",
 		availability:{
 			status:"unavailable"
 		},

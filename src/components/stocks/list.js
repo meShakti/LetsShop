@@ -27,10 +27,10 @@ const ListItem = ({ image, name, description,currency, cost,increment }) => {
 						{cost}
 					</p>
 				</div>
-				<button onClick={increment}className="bg-teal-600 w-full flex justify-center py-2 text-white font-semibold transition duration-300 hover:bg-teal-500">
-   					Add To Cart
-				</button>
 			</div>
+			<button onClick={increment}className=" bg-teal-600 w-full flex justify-center py-2 text-white font-semibold transition duration-300 hover:bg-teal-500">
+   					Add To Cart
+			</button>
 		</div>
 	);
 };
