@@ -6,7 +6,7 @@ const EmptyAlert = () =>{
 		<div className={Layout.empty}>
         You have not order anything yet!
 			<img className={Layout.dogIcon} src="./images/cartdog.png"/>
-			<p className={Layout.homeLink}>Check out our collection <a href="/"> <strong>here</strong></a></p>
+			<p className={Layout.homeLink}>Check out our collection <a href="/"> <span className={Layout.highlight}>here</span></a></p>
 		</div>
 	);
 };
