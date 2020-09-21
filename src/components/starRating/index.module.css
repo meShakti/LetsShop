@@ -1,0 +1,9 @@
+ .stars input[type="radio"]{
+display: none;
+}
+
+.star{
+    display: inline;
+    cursor: pointer;
+
+}
