@@ -51,7 +51,7 @@ Header.propTypes = {
 };
 
 const mapStateToProps = state => ({
-	counter: state.counterReducer.counter
+	counter: state.stockReducer.cart.length
 });
 
 export default connect(
