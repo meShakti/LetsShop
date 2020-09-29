@@ -1,0 +1,98 @@
+.personal{
+    width: 100vw;
+}
+.input{
+    height: 3rem;
+    padding: 0.93rem 0.75rem;
+    border: 0.02rem solid rgba(0,0,0,.24);
+    width: 20rem;
+    margin: 0.5rem 0;
+    border-radius: 0.25rem;
+
+}
+.address{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.state , .city{
+height: 3rem;
+padding: 0.93rem 0.75rem;
+border: 0.02rem solid rgba(0,0,0,.24);
+width: 9.5rem;
+margin: 0.5rem 0;
+border-radius: 0.25rem;
+
+}
+.city{
+    margin-left: 1rem;
+}
+
+.label{
+    font-size: 0.75rem;
+    letter-spacing: 0.025rem;
+    line-height: 1rem;
+    color: #878787;
+
+}
+.header{
+    margin: 1rem 0rem;
+
+}
+.work, .home{
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border: 0.02rem solid rgba(0,0,0,.24);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    
+}
+.work{
+    margin-left: 1rem;
+}
+.icon{
+    display: inline;
+    vertical-align: top;
+}
+.btn{
+    margin-top: 1.5rem;
+    width: 20rem;
+    color: #fff;
+    line-height: 2.5rem;
+    background-color: #ff5800;
+    text-align: center;
+    border: 0.125rem solid #ff5800;
+    border-radius: 0.125rem;
+    font-size: 1rem;
+   
+}
+.btn__cancel{
+    display: none;
+}
+
+/*Styles for screens larger than Mobile eg Tablets and laptops */
+
+@media only screen and (min-width: 700px){
+    .input{
+        margin-right: 1rem;
+    }
+    .address{
+        width: 42rem;
+        margin: 0;
+        overflow: hidden;
+    }
+    .btn__cancel{
+        display: inline-block;
+        margin: 1.5rem 1rem;
+        width: 20rem;
+        color: #fff;
+        line-height: 2.5rem;
+        background-color: #0669b9;
+        text-align: center;
+        border: 0.125rem solid #0669b9;
+        border-radius: 0.125rem;
+        font-size: 1rem;
+
+
+    }
+
+}
