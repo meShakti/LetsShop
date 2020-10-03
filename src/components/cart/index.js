@@ -1,12 +1,14 @@
 import React from "react";
 import * as Layout from "./cart.module.css";
-import data from "../../state/stocks/mock";
 import {IoMdAddCircleOutline} from "react-icons/io";
 import {IoMdRemoveCircleOutline} from "react-icons/io";
 import {connect} from "react-redux";
+import {addToCart,removeFromCart,saveForLaterAction,removeFromLaterAction} from "../../state/stocks/actions";
 import PropTypes from "prop-types";
+import EmptyAlert from "../EmptyAlert/EmptyAlert";
 
-const CartItem = ({image,name,description,currency,cost})=>{
+const CartItem = (props)=>{
+	const {image,name,description,currency,cost,removeFromCart,saveForLaterAction} = props; // eslint-disable-line
 	return(<div className={Layout.item}>
 		<div className={Layout.image}>
 			<img src={image}></img>
@@ -23,13 +25,37 @@ const CartItem = ({image,name,description,currency,cost})=>{
 			<p>{description}</p> 
 			<p>{currency} {cost}</p>
 			<div>
-				<button className ="mr-1  mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-32">Remove</button>
-				<button className ="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-32">Save For Later</button>
+				<button onClick={()=>removeFromCart({...props})} className ="mr-1  mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-32">Remove</button>
+				<button onClick={()=>saveForLaterAction({...props})} className ="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-32">Save For Later</button>
 			</div>
 		</div>
 	</div>);
 };
-export const Cart =({cart,saveForLater})=>{
+const SaveForLaterItem = (props)=>{
+	const {image,name,description,currency,cost,removeFromLaterAction,addToCart} = props; // eslint-disable-line
+	return(<div className={Layout.item}>
+		<div className={Layout.image}>
+			<img src={image}></img>
+			<div className= {Layout.inputgroup}>
+				<IoMdRemoveCircleOutline className={Layout.button} ></IoMdRemoveCircleOutline>
+				<div className={Layout.quantity}>1</div>
+				<IoMdAddCircleOutline className={Layout.button} ></IoMdAddCircleOutline>
+			</div>
+		
+		</div>
+	
+		<div>
+			<p>{name}</p> 
+			<p>{description}</p> 
+			<p>{currency} {cost}</p>
+			<div>
+				<button onClick={()=>removeFromLaterAction({...props})} className ="mr-1  mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-32">Remove</button>
+				<button onClick={()=>addToCart({...props})} className ="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-32">Add to Cart</button>
+			</div>
+		</div>
+	</div>);
+};
+export const Cart =({cart,saveForLater,addToCart,removeFromCart,saveForLaterAction,removeFromLaterAction})=>{
 	return (
 		<div>
 			<div className={Layout.container}>
@@ -67,12 +93,12 @@ export const Cart =({cart,saveForLater})=>{
 						</div>
 					</div>
 					{cart.map((item)=>{
-						return(<CartItem {...item} key={item.id}/>);
+						return(<CartItem {...item} saveForLaterAction={saveForLaterAction}removeFromCart={removeFromCart} key={item.id}/>);
 					})}
 					{/** Footer */}
-					<div className ={Layout.footer}>
+					{cart.length>0?<div className ={Layout.footer}>
 						<button className=" mt-4 bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded w-64">Place order</button>
-					</div>
+					</div>:<EmptyAlert />}
 				</div>
            
 				{/* Price Card  */}
@@ -97,31 +123,17 @@ export const Cart =({cart,saveForLater})=>{
 
 
 				{/* Save for Later Card */}
-				{saveForLater.length>0?	(<div className={Layout.itemcard}>
-					<div className={Layout.itemhead}>
+		
+				<div className={Layout.itemcard}>
+					{saveForLater.length>0?	(
+						<div className={Layout.itemhead}>
                     Save For Later
-					</div>
-					<div className={Layout.item}>
-						<div className={Layout.image}>
-							<img src={data[0].image}></img>
-							<div className={Layout.inputgroup}>
-								<IoMdRemoveCircleOutline className={Layout.button} ></IoMdRemoveCircleOutline>
-								<div className={Layout.quantity}>1</div>
-								<IoMdAddCircleOutline className={Layout.button} ></IoMdAddCircleOutline>
-							</div>        
 						</div>
-						<div>
-							<p>Maya Calendar Pillow </p> 
-							<p>Bedding Pillow</p> 
-							<p>Size: 3</p> 
-							<p> ₹ 100 </p>
-							<div>
-								<button className ="mr-1  mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-32">Remove</button>
-								<button className ="mt-4 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-2 border-b-4 border-green-700 hover:border-green-500 rounded w-32">Add to Cart</button>                    
-							</div>
-						</div>	
-					</div>
-				</div>) : null}
+					) : null}
+					{saveForLater.map((item)=>{
+						return(<SaveForLaterItem {...item} addToCart={addToCart}removeFromLaterAction={removeFromLaterAction} key={item.id}/>);
+					})}
+				</div>
 			</div>      
 		</div>    
 	);
@@ -132,19 +144,49 @@ CartItem.propTypes = {
 	name:PropTypes.string,
 	description:PropTypes.string,
 	currency:PropTypes.string,
-	cost: PropTypes.number
+	cost: PropTypes.number,
+	
+	removeFromCart: PropTypes.func,
+	saveForLaterAction:PropTypes.func,
+	removeFromLaterAction: PropTypes.func
 };
+
+SaveForLaterItem.propTypes = {
+	image:PropTypes.string,
+	name:PropTypes.string,
+	description:PropTypes.string,
+	currency:PropTypes.string,
+	cost: PropTypes.number,
+	
+	removeFromCart: PropTypes.func,
+	saveForLaterAction:PropTypes.func,
+	removeFromLaterAction: PropTypes.func
+};
+
 Cart.propTypes = {
 	cart: PropTypes.any,
-	saveForLater:PropTypes.any
+	saveForLater:PropTypes.any,
+	removeFromCart: PropTypes.func,
+	saveForLaterAction:PropTypes.func,
+	removeFromLaterAction: PropTypes.func,
+	addToCart: PropTypes.func
 };
 
 const mapStateToProps = state => ({
 	cart: state.stockReducer.cart,
 	saveForLater: state.stockReducer.saveForLater
 });
+const mapDispatchToProps = dispatch => {
+	return {
+		addToCart: (payload) => dispatch(addToCart(payload)),
+		removeFromCart: (payload)=> dispatch(removeFromCart(payload)),
+		saveForLaterAction: (payload)=> dispatch(saveForLaterAction(payload)),
+		removeFromLaterAction:(payload)=> dispatch(removeFromLaterAction(payload)),
+		
+	};
+};
 
 export default connect(
 	mapStateToProps,
-	null
+	mapDispatchToProps
 )(Cart);
