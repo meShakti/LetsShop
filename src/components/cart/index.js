@@ -3,19 +3,19 @@ import * as Layout from "./cart.module.css";
 import {IoMdAddCircleOutline} from "react-icons/io";
 import {IoMdRemoveCircleOutline} from "react-icons/io";
 import {connect} from "react-redux";
-import {addToCart,removeFromCart,saveForLaterAction,removeFromLaterAction} from "../../state/stocks/actions";
+import {addToCart,removeFromCart,saveForLaterAction,removeFromLaterAction,subtractItemFromCart} from "../../state/stocks/actions";
 import PropTypes from "prop-types";
 import EmptyAlert from "../EmptyAlert/EmptyAlert";
 
 const CartItem = (props)=>{
-	const {image,name,description,currency,cost,removeFromCart,saveForLaterAction} = props; // eslint-disable-line
+	const {image,name,description,currency,cost,removeFromCart,saveForLaterAction,quantity,subtractItemFromCart,addToCart} = props; // eslint-disable-line
 	return(<div className={Layout.item}>
 		<div className={Layout.image}>
 			<img src={image}></img>
 			<div className= {Layout.inputgroup}>
-				<IoMdRemoveCircleOutline className={Layout.button} ></IoMdRemoveCircleOutline>
-				<div className={Layout.quantity}>1</div>
-				<IoMdAddCircleOutline className={Layout.button} ></IoMdAddCircleOutline>
+				<IoMdRemoveCircleOutline className={Layout.button}onClick={()=>subtractItemFromCart(props.item)} ></IoMdRemoveCircleOutline>
+				<div className={Layout.quantity}>{quantity}</div>
+				<IoMdAddCircleOutline className={Layout.button} onClick={()=>addToCart(props.item)} ></IoMdAddCircleOutline>
 			</div>
 		
 		</div>
@@ -36,11 +36,6 @@ const SaveForLaterItem = (props)=>{
 	return(<div className={Layout.item}>
 		<div className={Layout.image}>
 			<img src={image}></img>
-			<div className= {Layout.inputgroup}>
-				<IoMdRemoveCircleOutline className={Layout.button} ></IoMdRemoveCircleOutline>
-				<div className={Layout.quantity}>1</div>
-				<IoMdAddCircleOutline className={Layout.button} ></IoMdAddCircleOutline>
-			</div>
 		
 		</div>
 	
@@ -55,7 +50,8 @@ const SaveForLaterItem = (props)=>{
 		</div>
 	</div>);
 };
-export const Cart =({cart,saveForLater,addToCart,removeFromCart,saveForLaterAction,removeFromLaterAction})=>{
+export const Cart =({cart,saveForLater,totalPrice,deleiveryPrice,addToCart,removeFromCart,saveForLaterAction,removeFromLaterAction,subtractItemFromCart})=>{
+	const currency = cart && cart[0] && cart[0].currency;
 	return (
 		<div>
 			<div className={Layout.container}>
@@ -64,16 +60,16 @@ export const Cart =({cart,saveForLater,addToCart,removeFromCart,saveForLaterActi
 				   <div className={Layout.priceCardTop}>
 					<div className={Layout.heading}>
                     Price Details
-					</div>
+					</div>			
 					<div className={Layout.pricedetails}>
 						<span> Price</span>
-						<span>₹ 100</span>
+						<span>{currency} {totalPrice}</span>
 						<span> Delivery Fee</span>
-						<span>₹ 40</span>
+						<span>{currency} {deleiveryPrice}</span>
 					</div>
 					<div className={Layout.total}>
 						<span > Total</span>
-						<span>₹ 140</span> 
+						<span>{currency} {totalPrice + deleiveryPrice}</span> 
 					</div>
 					<div >
 						<button className="mt-4 bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded w-56">Place order</button>
@@ -93,7 +89,7 @@ export const Cart =({cart,saveForLater,addToCart,removeFromCart,saveForLaterActi
 						</div>
 					</div>
 					{cart.map((item)=>{
-						return(<CartItem {...item} saveForLaterAction={saveForLaterAction}removeFromCart={removeFromCart} key={item.id}/>);
+						return(<CartItem {...item} item={item} addToCart={addToCart} subtractItemFromCart={subtractItemFromCart} saveForLaterAction={saveForLaterAction}removeFromCart={removeFromCart} key={item.id}/>);
 					})}
 					{/** Footer */}
 					{cart.length>0?<div className ={Layout.footer}>
@@ -108,13 +104,13 @@ export const Cart =({cart,saveForLater,addToCart,removeFromCart,saveForLaterActi
 					</div>
 					<div className={Layout.pricedetails}>
 						<span> Price</span>
-						<span>₹ 100</span>
+						<span>{currency} {totalPrice}</span>
 						<span> Delivery Fee</span>
-						<span>₹ 40</span>
+						<span>{currency} {deleiveryPrice}</span>
 					</div>
 					<div className={Layout.total}>
 						<span > Total</span>
-						<span>₹ 140</span> 
+						<span>{currency} {totalPrice + deleiveryPrice}</span> 
 					</div>
 					<div >
 						<button className="mt-4 bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded w-56">Place order</button>
@@ -145,10 +141,11 @@ CartItem.propTypes = {
 	description:PropTypes.string,
 	currency:PropTypes.string,
 	cost: PropTypes.number,
-	
+	subtractItemFromCart:PropTypes.func,
 	removeFromCart: PropTypes.func,
 	saveForLaterAction:PropTypes.func,
-	removeFromLaterAction: PropTypes.func
+	removeFromLaterAction: PropTypes.func,
+	item: PropTypes.any
 };
 
 SaveForLaterItem.propTypes = {
@@ -169,12 +166,18 @@ Cart.propTypes = {
 	removeFromCart: PropTypes.func,
 	saveForLaterAction:PropTypes.func,
 	removeFromLaterAction: PropTypes.func,
-	addToCart: PropTypes.func
+	addToCart: PropTypes.func,
+	subtractItemFromCart:PropTypes.func,
+	totalPrice: PropTypes.number,
+	deleiveryPrice: PropTypes.number,
+	item:PropTypes.any
 };
 
 const mapStateToProps = state => ({
 	cart: state.stockReducer.cart,
-	saveForLater: state.stockReducer.saveForLater
+	saveForLater: state.stockReducer.saveForLater,
+	totalPrice:state.stockReducer.cart.reduce((sum,stock)=>{ return sum+(stock.quantity*stock.cost);},0),
+	deleiveryPrice: state.stockReducer.cart.reduce((sum,stock)=>{ return sum+ stock.delieveryCharge;},0),
 });
 const mapDispatchToProps = dispatch => {
 	return {
@@ -182,6 +185,7 @@ const mapDispatchToProps = dispatch => {
 		removeFromCart: (payload)=> dispatch(removeFromCart(payload)),
 		saveForLaterAction: (payload)=> dispatch(saveForLaterAction(payload)),
 		removeFromLaterAction:(payload)=> dispatch(removeFromLaterAction(payload)),
+		subtractItemFromCart:(payload)=> dispatch(subtractItemFromCart(payload)),
 		
 	};
 };
