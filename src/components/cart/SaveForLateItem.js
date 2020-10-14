@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import * as Layout from "./cart.module.css";
 
+// Save for later component
 const SaveForLaterItem = (props)=>{
 	const {image,name,description,currency,cost,removeFromLaterAction,addToCart} = props; // eslint-disable-line
 	return(<div className={Layout.item}>

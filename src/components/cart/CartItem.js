@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import {IoMdAddCircleOutline} from "react-icons/io";
 import {IoMdRemoveCircleOutline} from "react-icons/io";
 import * as Layout from "./cart.module.css";
-
+// Cart Item component
 const CartItem = (props)=>{
 	const {image,name,description,currency,cost,removeFromCart,saveForLaterAction,quantity,subtractItemFromCart,addToCart} = props; // eslint-disable-line
 	return(<div className={Layout.item}>

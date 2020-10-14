@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import * as Layout from "./cart.module.css";
 
+// Price card component
 const PriceCard = ({className,totalPrice,currency,deleiveryPrice})=>{
 	return(
 		<div className={className}>
