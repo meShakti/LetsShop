@@ -16,6 +16,7 @@
     background-color: white;
     border-bottom: .5rem solid rgba(230, 223, 223, 0.959);
     text-align: center;
+    padding: 0.4rem;
 }
 
 .reviewIcon{
@@ -26,6 +27,7 @@
 .title{
     font-size: 1rem;
     margin-left: 1rem;
+   
 }
 .subtitle{
     font-size: 0.8rem;
@@ -57,13 +59,21 @@
     .title{
         font-size: 1rem;
         margin-left: 8rem;
+         width: 22rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     }
     .reviewIcon{
         float: none;
        margin: 0 auto;
+       width: 7rem;
+       height: 7rem;
     }
     .price{
         display: block;
+        margin-top: auto;
+        margin-bottom: auto;
     }
     .reviewNewPage{
         display: block;
