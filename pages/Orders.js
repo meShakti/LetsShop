@@ -1,5 +1,5 @@
 import React from "react";
-import Order from "../src/components/orders/order";
+import Order from "../src/components/orders";
 
 const Orders =() => {
 	return ( 
