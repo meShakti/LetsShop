@@ -20,7 +20,7 @@ const PriceCard = ({className,totalPrice,currency,deleiveryPrice})=>{
 				<span>{currency} {totalPrice + deleiveryPrice}</span> 
 			</div>
 			<div >
-				<button className="mt-4 bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded w-56">Place order</button>
+				<button  className="mt-4 bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded w-56"><a href="/Payment">Place order</a></button>
 			</div>
 		</div>
 
