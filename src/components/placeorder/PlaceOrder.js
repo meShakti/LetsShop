@@ -8,13 +8,15 @@ const PlaceOrder =() => {
 		<div className={Layout.container}>
 			<div className={Layout.left}>
 				<div className={Layout.Address}>
-					<Address></Address>
+					<Address/>
 				</div>
 				<div className={Layout.PaymentCard}>
-					<Payment></Payment></div>
+					<Payment/>
+				</div>
 			</div>
 			<div className={Layout.pricecard}>
-				<PriceCard></PriceCard></div>
+				<PriceCard/>
+			</div>
 		</div>
 	);
 };
