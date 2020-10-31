@@ -6,7 +6,7 @@ const AddAddress = () => {
 	return(
 		<div>
 			<form >
-				<div className={Style.personal}>
+				<div>
 					<input  className={Style.input} type="text" placeholder="Full Name*" required/>
 					<input  className={Style.input} type="number" placeholder="Phone Number*" required/>
 				</div>
