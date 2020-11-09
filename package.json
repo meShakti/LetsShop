@@ -33,6 +33,7 @@
     "build:tailwind": "tailwind build ./public/css/tailwind.css -o ./public/css/tailwind.output.css",
     "lint": "npx eslint ./",
     "lint:css": "npx stylint ./ ",
+    "lint:fix":"npx eslint ./ --fix && npx stylint ./ --fix",
     "lint:all": "npm run lint && npm run lint:css"
   },
   "eslintConfig": {},
