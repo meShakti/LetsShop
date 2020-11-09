@@ -5,7 +5,7 @@ import {getAddressList} from "./mockQuery"; // Replace with query when query is 
 /**
  * Hook which take care of integration of  stock list
  */
-export const useStockList =()=>{
+export const useAddressList =()=>{
 	const[isLoading,setIsLoading] = useState(false);
 	const [list,setList] = useState([]);
 

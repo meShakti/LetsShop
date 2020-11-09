@@ -7,7 +7,7 @@ export const getAddressList =()=>{
 	return new Promise((resolve)=>{
 		setTimeout(()=>{
 			resolve(AddressList);
-		});
+		},2000);
 	});
 
 };
