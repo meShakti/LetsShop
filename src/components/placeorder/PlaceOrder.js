@@ -16,8 +16,7 @@ const PlaceOrder = () => {
 				</div>
 				<div className={Layout.PaymentCard}>
 					<p onClick={showPayment}>
-						{!showPaymentForm && <div className={Layout.header}>Payment Options</div>}
-						{showPaymentForm && <div className={Layout.header}>Payment Options</div>}
+						{<div className={Layout.header}>Payment Options</div>}
 					</p>
 					{showPaymentForm && <Payment />}
 				</div>
