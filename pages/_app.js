@@ -2,6 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import Layout from "../src/components/layout";
 import "normalize.css";
+import "../public/css/colors.css";
+import "../public/css/dimens.css";
+import "../public/css/fonts.css";
 import "../public/css/tailwind.output.css";
 import "../public/css/global.css";
 

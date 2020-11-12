@@ -1,3 +1,7 @@
+body{
+    font-family: var(--default-font-family);
+  }
+
 .global-margin-top-standard{
     margin-top: 2rem;
 }
