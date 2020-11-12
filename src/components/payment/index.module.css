@@ -1,29 +1,26 @@
-.container{
-    height: calc(100% - 1rem);
-    background-color:#f1f3f6;
+.container {
+  height: calc(100% - 1rem);
+  background-color: #f1f3f6;
 }
-.paymentOption{
-
-   background-color: white;
-}
-
-.header{
-    
-    padding: 0.5rem;
-}
-.label{
-    padding-left: 1rem;
+.paymentOption {
+  background-color: white;
 }
 
-.Option{
-    padding-top: 1.4rem ;
-    padding-bottom: 1.4rem ;
-    padding-left: 1rem;
-    border-top: 0.01rem solid rgba(212, 212, 212, 0.781);
-    border-bottom: 0.01rem solid rgba(212, 212, 212, 0.781);
+.header {
+  padding: 0.5rem;
+}
+.label {
+  padding-left: 1rem;
 }
 
-.close{
-  
-   display: none;
+.Option {
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+  padding-left: 1rem;
+  border-top: 0.01rem solid rgba(212, 212, 212, 0.781);
+  border-bottom: 0.01rem solid rgba(212, 212, 212, 0.781);
+}
+
+.close {
+  display: none;
 }
