@@ -1,27 +1,33 @@
-.container{
-   background-color:#f1f3f6;
+.container {
+  background-color: #f1f3f6;
 }
 
-.Address{
-    margin-top: 1rem;
+.Address {
+  margin-top: 1rem;
 }
-.pricecard{
-    text-align: center;
-    margin-top: 1rem;
-    background-color: white;
-    padding: 1rem;
+.pricecard {
+  text-align: center;
+  margin-top: 1rem;
+  background-color: white;
+  padding: 1rem;
+}
+.header {
+  padding: 0.5rem;
+  background-color: white;
+  display: block;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 
-
-/* Laptop 1024px*/ 
+/* Laptop 1024px*/
 @media screen and (min-width: 1024px) {
-    .container{
-        padding: 1rem;
-       display: grid;
-       grid-template-columns: 0.7fr auto;
-       gap: 1rem;
-     }
-     .pricecard{
-         height: 50vh;
-     }
+  .container {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 0.7fr auto;
+    gap: 1rem;
+  }
+  .pricecard {
+    height: 50vh;
+  }
 }
