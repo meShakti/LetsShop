@@ -1,83 +1,85 @@
-.container{
-    background-color: #f1f3f6;
-    margin-bottom: 2rem;
+.container {
+  background-color: #f1f3f6;
+  margin-bottom: 2rem;
 }
-.addNewAddress{
- background-color: #ffffff;
- padding: 1.25rem;
- color: blue;
- margin-bottom: 1rem;
+.addNewAddress {
+  background-color: #ffffff;
+  padding: 1.25rem;
+  color: blue;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border: none;
 }
-.addressCount{
-    font-size: 0.8rem;
-    color:gray ;
-    padding: 0.5rem;
+.addressCount {
+  font-size: 0.8rem;
+  color: gray;
+  padding: 0.5rem;
 }
-.addressList{
-   display: grid;
-   row-gap: 0.5rem;
+.addressList {
+  display: grid;
+  row-gap: 0.5rem;
 }
-.addressCard{
-    background-color: #ffffff;
-    padding: 1.25rem;
+.addressCard {
+  background-color: #ffffff;
+  padding: 1.25rem;
 }
 
-.mobileLabel{
-    background-color:#f0f0f0;
-    color: #878787;
-    padding:0 0.5rem;
-    margin-left: 0.9rem;
-    font-size: 0.7rem;
+.mobileLabel {
+  background-color: #f0f0f0;
+  color: #878787;
+  padding: 0 0.5rem;
+  margin-left: 0.9rem;
+  font-size: 0.7rem;
 }
-.name{
-    display: inline;
-    font-size: 1.125rem;
-    word-break: break-word;
+.name {
+  display: inline;
+  font-size: 1.125rem;
+  word-break: break-word;
 }
 .address {
-    word-break: break-word;
-    font-weight: 200;
-    line-height: 1.4;
-    max-width: 11rem;
-    margin-bottom: 0.4rem;
+  word-break: break-word;
+  font-weight: 200;
+  line-height: 1.4;
+  max-width: 11rem;
+  margin-bottom: 0.4rem;
 }
-.contact{
-    font-weight: 200;
+.contact {
+  font-weight: 200;
 }
 
-.desktopLabel{
-    display: none;
-    background-color:#f0f0f0;
-    color: #878787;
-    padding:0.1rem 0.5rem;
-    font-size: 0.7rem;
-    max-width: 3rem;
-    margin-bottom: 1rem;
+.desktopLabel {
+  display: none;
+  background-color: #f0f0f0;
+  color: #878787;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.7rem;
+  max-width: 3rem;
+  margin-bottom: 1rem;
 }
-.options{
-    display: inline;
-    float:right;
+.options {
+  display: inline;
+  float: right;
 }
 .options:after {
-    content: '\2807';
-    font-size: 1rem;
-    }
-.menu{
-        display: none;
-    }
+  content: "\2807";
+  font-size: 1rem;
+}
+.menu {
+  display: none;
+}
 
-.icon{
-    color: blue;
-    display: inline;
-    font-size: 1.5rem;
-    vertical-align: top;
+.icon {
+  color: blue;
+  display: inline;
+  font-size: 1.5rem;
+  vertical-align: top;
 }
 /*Styles for screens larger than Mobile eg Tablets and laptops */
-@media only screen and (min-width : 700px){
-    .desktopLabel{
-        display: block;
-    }
-    .mobileLabel{
-        display: none;
-    }
+@media only screen and (min-width: 700px) {
+  .desktopLabel {
+    display: block;
+  }
+  .mobileLabel {
+    display: none;
+  }
 }
