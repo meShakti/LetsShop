@@ -2,3 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/**
+For reference
+    @font-face {
+        font-family:'Karla';
+        src: url('something') format('truetype');
+    }
+    
+    .btn-blue {
+        @apply bg-blue-500 text-white font-bold py-3 px-4 rounded
+    }
+
+    Always use custom classes at the end . This way the value will be chosen due to specivity
+*/
