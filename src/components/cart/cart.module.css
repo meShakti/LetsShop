@@ -72,12 +72,6 @@
   cursor: pointer;
 }
 
-.deliveraddress{
-      float:right;
-      font-size:0.8rem;
-      border : none;
-      margin:0;
-  }
 .button{
     font-size: 2rem;
     padding:0.4rem;

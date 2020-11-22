@@ -20,14 +20,6 @@ export const Cart =({cart,saveForLater,totalPrice,deleiveryPrice,addToCart,remov
 				<div className={Layout.itemcard}>
 					<div className={Layout.itemhead}>
                     	My Cart
-						<div className={Layout.deliveraddress}>
-							<p> Deliver At :
-								<select >
-									<option value="myaddress ">B-3/252 Sudershana Nagar</option>
-									<option value="newaddress">Bangalore</option>
-								</select>
-							</p>
-						</div>
 					</div>
 					{cart.map((item)=>{
 						return(<CartItem {...item} item={item} addToCart={addToCart} subtractItemFromCart={subtractItemFromCart} saveForLaterAction={saveForLaterAction}removeFromCart={removeFromCart} key={item.id}/>);
