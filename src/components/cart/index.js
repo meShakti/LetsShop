@@ -15,7 +15,7 @@ export const Cart =({cart,saveForLater,totalPrice,deleiveryPrice,addToCart,remov
 			<div className={Layout.container}>
 
 				   {/* Price  topCard  mobileView*/}
-				   <PriceCard className={Layout.priceCardTop} totalPrice={totalPrice} deleiveryPrice={deleiveryPrice} currency={currency}/>
+				   <PriceCard className={Layout.priceCardTop} goToLink='/Payment' totalPrice={totalPrice} deleiveryPrice={deleiveryPrice} currency={currency}/>
 				{/* Cart Section  */}
 				<div className={Layout.itemcard}>
 					<div className={Layout.itemhead}>
@@ -26,12 +26,12 @@ export const Cart =({cart,saveForLater,totalPrice,deleiveryPrice,addToCart,remov
 					})}
 					{/** Footer */}
 					{cart.length>0?<div className ={Layout.footer}>
-						<button className=" mt-4 bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded w-64">Place order</button>
-					</div>:<EmptyAlert />}
+						<a href="/Payment">		<button className=" mt-4 bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded w-64">Place order</button>
+						</a></div>:<EmptyAlert />}
 				</div>
            
 				{/* Price Card  Desktop View*/}
-				<PriceCard className={Layout.price} totalPrice={totalPrice} deleiveryPrice={deleiveryPrice} currency={currency}/>
+				<PriceCard className={Layout.price}  goToLink='/Payment' totalPrice={totalPrice} deleiveryPrice={deleiveryPrice} currency={currency}/>
 
 
 				{/* Save for Later Card */}

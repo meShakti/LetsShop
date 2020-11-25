@@ -11,6 +11,14 @@
   background-color: white;
   padding: 1rem;
 }
+
+.priceCardTop{   
+  width: 20vw;
+ margin:2rem;
+  padding: 2rem;
+  height: 50vh; 
+  display: none;
+}
 .header {
   padding: 0.5rem;
   background-color: white;
@@ -30,4 +38,15 @@
   .pricecard {
     height: 50vh;
   }
+}
+
+@media screen and (max-width: 768px) { 
+  .pricecard{   
+    display: none;
+ }
+ .priceCardTop{   
+     width: auto;
+     height: auto;
+     display: block;
+ }
 }
