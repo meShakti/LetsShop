@@ -1,6 +1,6 @@
 .container {
   background-color: #f1f3f6;
-  margin-bottom: 2rem;
+  
 }
 .addNewAddress {
   background-color: #ffffff;
@@ -22,6 +22,7 @@
 .addressCard {
   background-color: #ffffff;
   padding: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .mobileLabel {
@@ -82,4 +83,6 @@
   .mobileLabel {
     display: none;
   }
+
+
 }

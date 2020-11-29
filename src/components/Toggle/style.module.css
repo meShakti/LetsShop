@@ -1,0 +1,33 @@
+.container{
+    background-color: #ffffff;
+    padding: 1rem;
+   
+}
+.header{
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: inline;
+    
+}
+.headIcons{
+    display: inline;
+    float: right;
+    vertical-align: baseline;
+}
+
+/* Laptop 1024px*/
+@media screen and (min-width: 1024px) {
+    .container{
+        text-align: left;
+        padding: 0.5rem;
+      
+    }
+    .header{
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: inline;
+    }
+    .headIcons{
+        cursor: pointer;
+    }
+  }
