@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import Payment from "../payment/index";
 import PriceCard from "../cart/PriceCard";
 import * as Layout from "./style.module.css";
-import Address from "../addresses/AddressList";
+import Address from "../addresses/List";
 const PlaceOrder = ({totalPrice,deleiveryPrice}) => {
 	const [showPaymentForm, setPaymentForm] = useState(true);
 	const showPayment = () => {
