@@ -10,3 +10,6 @@ body{
     margin:auto
 }
    
+.bottom-border-1{
+    border-bottom: 0.01rem solid rgba(212, 212, 212, 0.781);
+}

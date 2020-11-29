@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import Payment from "../payment/index";
 import PriceCard from "../cart/PriceCard";
 import * as Layout from "./style.module.css";
-import Address from "../addresses/index";
+import Address from "../addresses/AddressList";
 const PlaceOrder = ({totalPrice,deleiveryPrice}) => {
 	const [showPaymentForm, setPaymentForm] = useState(true);
 	const showPayment = () => {
@@ -16,6 +16,9 @@ const PlaceOrder = ({totalPrice,deleiveryPrice}) => {
 			<PriceCard className={Layout.priceCardTop} goToLink='/Orders' totalPrice={totalPrice} deleiveryPrice={deleiveryPrice} />
 			<div className={Layout.left}>
 				<div className={Layout.Address}>
+					<p>
+						<div className={`bottom-border-1 ${Layout.header}`}>Select Address</div>
+					</p>
 					<Address />
 				</div>
 				<div className={Layout.PaymentCard}>
