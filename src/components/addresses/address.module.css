@@ -1,9 +1,9 @@
 .container {
-  background-color: #f1f3f6;
+  background-color:var(--default-card-background);
   
 }
 .addNewAddress {
-  background-color: #ffffff;
+  background-color: var(--default-layout-white);
   padding: 1.25rem;
   color: blue;
   margin-bottom: 1rem;
@@ -20,13 +20,13 @@
   row-gap: 0.5rem;
 }
 .addressCard {
-  background-color: #ffffff;
+  background-color:var(--default-layout-white);
   padding: 1.25rem;
   margin-bottom: 1rem;
 }
 
 .mobileLabel {
-  background-color: #f0f0f0;
+  background-color:var(--default-label-background);
   color: #878787;
   padding: 0 0.5rem;
   margin-left: 0.9rem;
@@ -50,7 +50,7 @@
 
 .desktopLabel {
   display: none;
-  background-color: #f0f0f0;
+  background-color:var(--default-label-background);
   color: #878787;
   padding: 0.1rem 0.5rem;
   font-size: 0.7rem;

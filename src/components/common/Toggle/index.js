@@ -13,8 +13,8 @@ const Toggle =(props)=>{
 		<div className={Layout.container}>
 			<div onClick={toggle} className={Layout.header}>{props.name}</div>
 			<div onClick={toggle} className={Layout.headIcons} >
-				{!showDiv &&<IoIosArrowUp color={"gray"} size={30}/>}
-				{showDiv &&<IoIosArrowDown color={"gray"} size={30}/>}
+				{!showDiv &&<IoIosArrowUp color="gray" size={30}/>}
+				{showDiv &&<IoIosArrowDown color="gray" size={30}/>}
 			</div>
 			{showDiv && <div> {props.children} </div>} 
     
@@ -25,7 +25,7 @@ const Toggle =(props)=>{
 Toggle.propTypes = {
 	
 	name:PropTypes.string,
-	children : PropTypes.any
+	children : PropTypes.node
 };
 
 export default Toggle;

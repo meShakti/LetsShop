@@ -3,7 +3,7 @@ import Payment from "../payment/index";
 import PriceCard from "../cart/PriceCard";
 import * as Layout from "./style.module.css";
 import Address from "../addresses/index";
-import Toggle from "../Toggle/index";
+import CollapsibleDiv from "../common/Toggle/index";
 const PlaceOrder = () => {
 	const [showPaymentForm, setPaymentForm] = useState(false);
 	const showPayment = () => {
@@ -26,9 +26,9 @@ const PlaceOrder = () => {
 				<PriceCard />
 			</div>
 			<div>
-				<Toggle name= {"Payment Options"}>
+				<CollapsibleDiv name= {"Payment Options"}>
 				 <Payment />	
-				</Toggle> 
+				</CollapsibleDiv> 
 			</div>
 		</div>
 	);

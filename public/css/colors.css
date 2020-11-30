@@ -1,4 +1,7 @@
 :root {
     --default-layout-background:black;
+    --default-layout-white:#ffffff;
+    --default-card-background: #f1f3f6;
+    --default-label-background :#f0f0f0;
   }
   
