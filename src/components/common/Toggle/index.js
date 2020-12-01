@@ -5,7 +5,7 @@ import { useState } from "react";
 import {IoIosArrowUp, IoIosArrowDown} from "react-icons/io";
 
 const Toggle =(props)=>{
-	const [showDiv, setvisiblility] = useState(false);
+	const [showDiv, setvisiblility] = useState(true);
 	const toggle = () => {
 		setvisiblility(!showDiv);
 	};

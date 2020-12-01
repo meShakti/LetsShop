@@ -1,9 +1,9 @@
 .container {
-  background-color:var(--default-card-background);
+  background-color:var(--default-layout-background-light);
   
 }
 .addNewAddress {
-  background-color: var(--default-layout-white);
+  background-color: var(--default-opaque-background);
   padding: 1.25rem;
   color: blue;
   margin-bottom: 1rem;
@@ -20,7 +20,7 @@
   row-gap: 0.5rem;
 }
 .addressCard {
-  background-color:var(--default-layout-white);
+  background-color: var(--default-opaque-background);
   padding: 1.25rem;
   margin-bottom: 1rem;
 }
