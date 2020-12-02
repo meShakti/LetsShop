@@ -22,7 +22,7 @@ export const Cart = ({ cart, saveForLater, totalPrice, deleiveryPrice, addToCart
 						My Cart
 					</div>
 					{cart.map((item) => {
-						return (<CartItem {...item} item={item} addToCart={addToCart} subtractItemFromCart={subtractItemFromCart} saveForLaterAction={saveForLaterAction} removeFromCart={removeFromCart} key={item.id} />);
+						return (<CartItem {...item} writemode={true} item={item} addToCart={addToCart} subtractItemFromCart={subtractItemFromCart} saveForLaterAction={saveForLaterAction} removeFromCart={removeFromCart} key={item.id} />);
 					})}
 					{/** Footer */}
 					{cart.length > 0 ? <div className={Layout.footer}>
