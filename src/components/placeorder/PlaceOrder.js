@@ -3,7 +3,7 @@ import Payment from "../payment/index";
 import PriceCard from "../cart/PriceCard";
 import * as Layout from "./style.module.css";
 import Address from "../addresses/index";
-import CollapsibleDiv from "../common/Toggle/index";
+import CollapsibleWrapper from "../common/CollapsibleWrapper/index";
 const PlaceOrder = () => {
 	return (
 		<div className={Layout.container}>
@@ -12,9 +12,9 @@ const PlaceOrder = () => {
 					<Address />
 				</div>
 				<div>
-					<CollapsibleDiv name= {"Payment Options"}>
+					<CollapsibleWrapper expand={false} name= {"Payment Options"}>
 				 		<Payment />	
-					</CollapsibleDiv> 
+					</CollapsibleWrapper> 
 				</div>
 			</div>
 			<div className={Layout.priceCard}>
