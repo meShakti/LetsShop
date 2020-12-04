@@ -1,7 +1,7 @@
 import React ,{useState} from "react";
 import PropTypes from "prop-types";
 import * as Layout from "./cart.module.css";
-import Popup from "../Alert/index";
+import Popup from "../common/Alert/index";
 // Price card component
 const PriceCard = ({className,totalPrice,currency,deleiveryPrice})=>{
 	const [isOpen, setIsOpen] = useState(false);

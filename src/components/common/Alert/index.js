@@ -9,13 +9,13 @@ const Alert = (props)=>{
 				<div className={Layout.heading}>Enter Your Mobile Number</div>
 				<div className={Layout.content}>+91<input className={Layout.contact} type="tel"/></div> 
 				<div className={Layout.content}>OTP <input className={Layout.otp} type="tel"/></div> 
-				<div ><button className={Layout.btnSubmit} ><a href="/ThankYouAlert">Submit OTP</a></button></div> 
+				<div ><button className={Layout.btnSubmit} >Submit OTP</button></div> 
 			</div>
 		</div>
 	);
 };
 Alert.propTypes ={
-	handleClose : Proptypes.function
+	handleClose : Proptypes.func
 };
 
 
