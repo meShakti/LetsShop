@@ -14,8 +14,8 @@ const Toggle =(props)=>{
 		<div className={Layout.container}>
 			<div onClick={toggle} className={Layout.header}>{name}</div>
 			<div onClick={toggle} className={Layout.headIcons} >
-				{!showDiv &&<IoIosArrowUp color="gray" size={30}/>}
-				{showDiv &&<IoIosArrowDown color="gray" size={30}/>}
+				{!showDiv &&<IoIosArrowDown color="gray" size={30}/>}
+				{showDiv &&<IoIosArrowUp color="gray" size={30}/>}
 			</div>
 			{showDiv && props.children } 
     
