@@ -1,0 +1,65 @@
+.popupBox {
+    position: fixed;
+    background:var(--modal-background);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
+   
+  .box {
+    position: relative;
+    width: 20rem;
+    margin: 0 auto;
+    max-height: 70vh;
+    margin-top: calc(100vh - 68vh);
+    background:var(--default-opaque-background);
+    border-radius: 0.25rem;
+    border: 0.0625rem solid var(--modal-border);
+    overflow: auto;
+  }
+   
+  .closeIcon {
+    content: 'x';
+    cursor: pointer;
+    position: sticky;
+    left: 19rem;
+    background: var(--default-opaque-background);
+    width: 1.5625rem;
+    height: 1.5625rem;
+    line-height:1.25rem;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 0.7rem;
+  }
+  .heading{
+     margin-bottom: 1rem;
+     font-size: 1.2rem;
+  }
+ .content{
+    font-size: 1rem;
+ } 
+  .contact{
+      border-bottom: 0.01rem solid  var(--default-layout-background);
+      margin-top:0.5rem;
+      margin-left: 1rem;  
+      outline: none;
+  }
+  .btnSubmit{
+      margin: 1rem 0;
+      padding: 0.5rem;
+      background-color: var(--btn-background);
+      color:var(--default-opaque-background);
+      border-radius: 0.4rem;
+     
+  }
+  .btnSubmit:focus{
+      outline: none;
+  }
+  .otp{
+    margin: 1rem 0;
+    border-bottom: 0.01rem solid  var(--default-layout-background);
+    outline: none;
+    margin-left: 0.4rem;  
+  }
+

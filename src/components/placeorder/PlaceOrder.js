@@ -1,4 +1,4 @@
-import React from "react";
+import React  from  "react";
 import Payment from "../payment/index";
 import PriceCard from "../cart/PriceCard";
 import * as Layout from "./style.module.css";
@@ -20,7 +20,6 @@ const PlaceOrder = () => {
 			<div className={Layout.priceCard}>
 				<PriceCard />
 			</div>
-			
 		</div>
 	);
 };
