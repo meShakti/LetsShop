@@ -2,10 +2,10 @@
   background-color: #f1f3f6;
 }
 
-.Address {
+.address {
   margin-top: 1rem;
 }
-.pricecard {
+.priceCard {
   text-align: center;
   margin-top: 1rem;
   background-color: white;
@@ -35,7 +35,7 @@
     grid-template-columns: 0.7fr auto;
     gap: 1rem;
   }
-  .pricecard {
+  .priceCard {
     height: 50vh;
   }
 }

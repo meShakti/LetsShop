@@ -1,37 +1,37 @@
-import React, { useState } from "react";
+import React from "react";
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
 import Payment from "../payment/index";
 import PriceCard from "../cart/PriceCard";
 import Address from "../addresses/List";
 import CartItem from "../cart/CartItem";
+import CollapsibleWrapper from "../common/CollapsibleWrapper/index";
 import * as Layout from "./style.module.css";
 
 const PlaceOrder = ({totalPrice,deleiveryPrice,cart,currency}) => {
-	const [showPaymentForm, setPaymentForm] = useState(true);
-	const showPayment = () => {
-		setPaymentForm(!showPaymentForm);
-	};
 	return (
 		<div className={Layout.container}>
 			{/** Mobile View */}
 			<PriceCard className={Layout.priceCardTop} currency={currency} goToLink='/Orders' totalPrice={totalPrice} deleiveryPrice={deleiveryPrice} />
 			<div className={Layout.left}>
-				<div className={Layout.Address}>
-					<div className={`bottom-border-1 ${Layout.header}`}>Select Address</div>
-					<Address />
-				</div>
-				<div className={Layout.PaymentCard}>
-					<p onClick={showPayment}>
-						<div className={Layout.header}>Payment Options</div>
-					</p>
-					{showPaymentForm && <Payment />}
+				<CollapsibleWrapper expand={false} name= {"Select Address"}>
+					<div  className={Layout.address}>
+						<Address />
+					</div>
+				</CollapsibleWrapper>
+				<div className="mt-10">
+					<CollapsibleWrapper expand={false} name= {"Payment Options"}>
+				 		<Payment />	
+					</CollapsibleWrapper> 
 				</div>
 				<div className="mt-10">
-					<div className={`bottom-border-1 ${Layout.header}`}>Review Cart</div>
-					{cart.map((item) => {
-						return (<CartItem {...item}  item={item} key={item.id} />);
-					})}
+					<CollapsibleWrapper expand={false} name= {"Review Cart"}>
+						{cart.map((item) => {
+							return (<CartItem {...item}  item={item} key={item.id} />);
+						})}
+					</CollapsibleWrapper> 
+
+					
 				</div>
 			</div>
 			
@@ -39,6 +39,7 @@ const PlaceOrder = ({totalPrice,deleiveryPrice,cart,currency}) => {
 				{/** Desktop View */}
 				<PriceCard  goToLink='/Orders' currency={currency} totalPrice={totalPrice} deleiveryPrice={deleiveryPrice} />
 			</div>
+			
 		</div>
 	);
 };

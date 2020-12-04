@@ -1,4 +1,7 @@
 :root {
     --default-layout-background:black;
+    --default-opaque-background:#ffffff;
+    --default-layout-background-light: #f1f3f6;
+    --default-label-background :#f0f0f0;
   }
   
