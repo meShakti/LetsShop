@@ -1,0 +1,49 @@
+.container {
+    background-color: #f1f3f6;
+    margin-bottom: 2rem;
+  }
+  .addressList {
+    display: grid;
+    row-gap: 0.5rem;
+  }
+  .addressCard {
+    background-color: #ffffff;
+    padding: 1.25rem;
+  }
+  
+  .typeLabel {
+    background-color: #f0f0f0;
+    color: #878787;
+    padding: 0 0.5rem;
+    margin-left: 0.9rem;
+    font-size: 0.7rem;
+  }
+
+  .name {
+    display: inline;
+    font-size: 1.125rem;
+    word-break: break-word;
+  }
+  .address {
+    word-break: break-word;
+    font-weight: 200;
+    line-height: 1.4;
+    max-width: 11rem;
+    margin-bottom: 0.4rem;
+  }
+  .contact {
+    font-weight: 200;
+  }
+  
+
+  .options {
+    display: inline;
+    float: right;
+  }
+  .options:after {
+    content: "\2807";
+    font-size: 1rem;
+  }
+  .menu {
+    display: none;
+  }

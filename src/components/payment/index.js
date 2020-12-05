@@ -5,21 +5,9 @@ const Payment = () => {
 		<div className={Layout.container}>
 			<div className={Layout.paymentOption}>
 				<div className={Layout.Option}>
-					<input type="radio" id="cod" name="pay" value="Cash" />
+					<input type="radio" id="cod" name="pay" value="Cash" checked/>
 					<label htmlFor="cod" className={Layout.label}>
             Cash On Delivery
-					</label>
-				</div>
-				<div className={Layout.Option}>
-					<input type="radio" id="net" name="pay" value="Net" />
-					<label htmlFor="net" className={Layout.label}>
-            Net Banking
-					</label>
-				</div>
-				<div className={Layout.Option}>
-					<input type="radio" id="Pay" name="pay" value="Pay" />
-					<label htmlFor="Pay" className={Layout.label}>
-            PayTM Wallet
 					</label>
 				</div>
 			</div>

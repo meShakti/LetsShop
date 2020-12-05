@@ -11,7 +11,7 @@ const PriceCard = ({className,totalPrice,currency,deleiveryPrice})=>{
 	return(
 		<div className={className}>
 			<div className={Layout.heading}>
-        Price Details
+				Price Details
 			</div>
 			<div className={Layout.pricedetails}>
 				<span> Price</span>
@@ -21,7 +21,7 @@ const PriceCard = ({className,totalPrice,currency,deleiveryPrice})=>{
 			</div>
 			<div className={Layout.total}>
 				<span > Total</span>
-				<span>{currency} {totalPrice + deleiveryPrice}</span> 
+				<span>{currency} {totalPrice + deleiveryPrice}</span>
 			</div>
 			<div >
 				<button onClick={togglePopup} className="mt-4 bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded w-56"><a href="/Payment">Place order</a></button>
@@ -37,10 +37,11 @@ const PriceCard = ({className,totalPrice,currency,deleiveryPrice})=>{
 };
 
 PriceCard.propTypes = {
-	className:PropTypes.string,
-	currency:PropTypes.string,
-	deleiveryPrice:PropTypes.number,
-	totalPrice:PropTypes.number
+	className: PropTypes.string,
+	currency: PropTypes.string,
+	deleiveryPrice: PropTypes.number,
+	totalPrice: PropTypes.number,
+	goToLink: PropTypes.string
 };
 
 
