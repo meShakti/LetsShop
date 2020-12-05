@@ -1,10 +1,14 @@
-import React from "react";
+import React ,{useState} from "react";
 import PropTypes from "prop-types";
 import * as Layout from "./cart.module.css";
-
+import Popup from "../common/Alert/index";
 // Price card component
-const PriceCard = ({ className, totalPrice, goToLink, currency, deleiveryPrice }) => {
-	return (
+const PriceCard = ({className,totalPrice,currency,deleiveryPrice})=>{
+	const [isOpen, setIsOpen] = useState(false);
+	const togglePopup = () => {
+		setIsOpen(!isOpen);
+	};
+	return(
 		<div className={className}>
 			<div className={Layout.heading}>
 				Price Details
@@ -20,9 +24,12 @@ const PriceCard = ({ className, totalPrice, goToLink, currency, deleiveryPrice }
 				<span>{currency} {totalPrice + deleiveryPrice}</span>
 			</div>
 			<div >
-				<a href={goToLink}>
-					<button className="mt-4 bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded w-56">Place order</button>
-				</a>
+				<button onClick={togglePopup} className="mt-4 bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded w-56"><a href="/Payment">Place order</a></button>
+			</div>
+			<div>
+				{isOpen && <Popup
+					handleClose={togglePopup}
+				/>}
 			</div>
 		</div>
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React  from  "react";
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
 import Payment from "../payment/index";
@@ -39,7 +39,6 @@ const PlaceOrder = ({totalPrice,deleiveryPrice,cart,currency}) => {
 				{/** Desktop View */}
 				<PriceCard  goToLink='/Orders' currency={currency} totalPrice={totalPrice} deleiveryPrice={deleiveryPrice} />
 			</div>
-			
 		</div>
 	);
 };
