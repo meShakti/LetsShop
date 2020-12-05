@@ -1,14 +1,24 @@
-import React  from  "react";
+import React, { useState }  from  "react";
 import {connect} from "react-redux";
+import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import Payment from "../payment/index";
 import PriceCard from "../cart/PriceCard";
 import Address from "../addresses/List";
 import CartItem from "../cart/CartItem";
 import CollapsibleWrapper from "../common/CollapsibleWrapper/index";
+import Popup from "../common/Alert/index";
 import * as Layout from "./style.module.css";
 
 const PlaceOrder = ({totalPrice,deleiveryPrice,cart,currency}) => {
+	const router = useRouter();
+	const [isOpen, setIsOpen] = useState(false);
+	const togglePopup = () => {
+		setIsOpen(!isOpen);
+	};
+	const redirectToOrders = () => {
+		router.push("/Orders");
+	};
 	return (
 		<div className={Layout.container}>
 			{/** Mobile View */}
@@ -37,7 +47,13 @@ const PlaceOrder = ({totalPrice,deleiveryPrice,cart,currency}) => {
 			
 			<div className={Layout.pricecard}>
 				{/** Desktop View */}
-				<PriceCard  goToLink='/Orders' currency={currency} totalPrice={totalPrice} deleiveryPrice={deleiveryPrice} />
+				<PriceCard  onAction={togglePopup} currency={currency} totalPrice={totalPrice} deleiveryPrice={deleiveryPrice} />
+			</div>
+			<div>
+				{isOpen && <Popup
+					handleClose={togglePopup}
+					action={redirectToOrders}
+				/>}
 			</div>
 		</div>
 	);
