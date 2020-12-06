@@ -22,7 +22,7 @@ const PlaceOrder = ({totalPrice,deleiveryPrice,cart,currency}) => {
 	return (
 		<div className={Layout.container}>
 			{/** Mobile View */}
-			<PriceCard className={Layout.priceCardTop} currency={currency} goToLink='/Orders' totalPrice={totalPrice} deleiveryPrice={deleiveryPrice} />
+			<PriceCard className={Layout.priceCardTop} currency={currency} onAction={togglePopup} totalPrice={totalPrice} deleiveryPrice={deleiveryPrice} />
 			<div className={Layout.left}>
 				<CollapsibleWrapper expand={false} name= {"Select Address"}>
 					<div  className={Layout.address}>
