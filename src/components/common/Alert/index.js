@@ -9,7 +9,7 @@ const Alert = (props)=>{
 				<div className={Layout.heading}>Enter Your Mobile Number</div>
 				<div className={Layout.content}>+91<input className={Layout.contact} type="tel"/></div> 
 				<div className={Layout.content}>OTP <input className={Layout.otp} type="number"/></div> 
-				<div ><button className={Layout.btnSubmit} onClick={props.action}>Submit OTP</button></div> 
+				<div > <a href="/SignUp"><button className={Layout.btnSubmit} onClick={props.action}>Submit OTP</button> </a></div> 
 			</div>
 		</div>
 	);

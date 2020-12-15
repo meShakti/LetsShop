@@ -1,0 +1,52 @@
+.container{
+  text-align: center;
+}
+.title{
+    font-size: 2rem;
+}
+.subline{
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+.userDetails{
+    font-size: 0.7rem;
+    text-align: left;
+    margin: 0 2.75rem;
+}
+.label{
+    display: inline-block;
+    margin: 0.48rem;
+    width: 6rem;
+}
+.input{
+    width: 8rem;
+    border-bottom: 0.1rem solid var(--modal-border);
+}
+
+
+@media (min-width: 600px){
+
+    .container{
+        padding: 1rem;
+
+    }
+    .subline{
+        font-size: 1.5rem;
+    }
+    .userDetails{
+        font-size: 1rem;
+        text-align: left;
+        display: block;
+        margin:  auto;
+        width: 30rem;
+
+    }
+    .label{
+        display: inline-block;
+        margin: 0.48rem;
+        width: 14rem;
+    }
+    .input{
+        width: 14rem;
+    }
+}
