@@ -1,5 +1,5 @@
 import React from "react";
-import * as Layout from "./style.module.css";
+import * as Layout from "./firstSignUp.module.css";
 const SignUp = () =>{
 
 	return(

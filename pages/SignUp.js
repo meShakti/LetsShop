@@ -1,8 +1,8 @@
 import React from "react";
-import UserSignIn from "../src/components/signup/index";
+import FirstSignUp from "../src/components/payment/FirstSignUp/FirstSignUp";
 
 const SignUp =() => {
-	return (<UserSignIn/>
+	return (<FirstSignUp/>
 	);
 };
 
