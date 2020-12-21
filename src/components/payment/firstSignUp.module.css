@@ -1,4 +1,8 @@
 .container{
+    margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   text-align: center;
 }
 .title{
@@ -27,6 +31,8 @@
 @media (min-width: 600px){
 
     .container{
+        left: 50%;
+        transform: translate(-50%, -50%);
         padding: 1rem;
 
     }
