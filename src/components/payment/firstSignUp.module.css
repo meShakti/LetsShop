@@ -1,10 +1,12 @@
 .container{
-    margin: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
+    display : flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
 }
+
 .title{
     font-size: 2rem;
 }
@@ -31,8 +33,7 @@
 @media (min-width: 600px){
 
     .container{
-        left: 50%;
-        transform: translate(-50%, -50%);
+        
         padding: 1rem;
 
     }
@@ -43,7 +44,6 @@
         font-size: 1rem;
         text-align: left;
         display: block;
-        margin:  auto;
         width: 30rem;
 
     }
