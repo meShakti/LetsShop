@@ -3,7 +3,7 @@ import * as Layout from "./firstSignUp.module.css";
 const SignUp = () =>{
 
 	return(
-		<div className={Layout.container} >
+		<div className={Layout.container}>
 		    <div className={Layout.title}>
                 Thank you for shopping with us!
 			</div>

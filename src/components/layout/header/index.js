@@ -32,6 +32,7 @@ const Header = ({counter}) => {
 					<a href="/Addresses" className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center  hover:bg-grey-dark">My Addresses</a>
 					<a href="/Orders" className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center  hover:bg-grey-dark">My orders</a>
 					<a href="#" className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center  hover:bg-grey-dark">Guest</a>
+					<a href="/Login" className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center  hover:bg-grey-dark">Sign In / Register</a>
 				</div>
 
 
