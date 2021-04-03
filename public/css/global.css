@@ -13,3 +13,14 @@ body{
 .bottom-border-1{
     border-bottom: 0.01rem solid rgba(212, 212, 212, 0.781);
 }
+
+.error-message{
+    color:var(--error-msg);
+    font-size: 0.8rem;
+    vertical-align: top;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+}
+.error-border{
+    border: 0.0001rem solid red;
+}

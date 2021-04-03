@@ -38,11 +38,6 @@ const Header = ({counter}) => {
 
 			</div>
 		</nav>
-
-			
-
-
-
 	);
 };
 
