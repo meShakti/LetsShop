@@ -11,7 +11,7 @@
     "chrome-launcher": "^0.13.4",
     "lighthouse": "^6.1.1",
     "lint-staged": "^10.2.11",
-    "next": "^9.4.4",
+    "next": "^11.1.0",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
